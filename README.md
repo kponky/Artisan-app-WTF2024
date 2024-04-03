@@ -1,8 +1,11 @@
-# React + Vite
+##This is An Artisan web application App created for artisans to connect, get discounted materials, get mentored and so much more.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+-- this is i a project of Capstone for women techsters felowship class of 2024
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+--it was created using React app + vite
+
+
+Authors myself - Abasi-ikponke Asquo and my distinguish collegue Aiyeshetu  Alhasaan 
+

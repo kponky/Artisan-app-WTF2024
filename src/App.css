@@ -53,6 +53,23 @@ nav{
 
 }
 
+/* nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+  color: white;
+  min-width: 10vh;
+} */
+
+.nav-links{
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
 nav ul{
   display: flex;
   list-style: none;
@@ -279,13 +296,13 @@ nav ul li  a{
 }
 
 .txt-img > .text1:nth-child(1){
-margin-top: 5.5rem;
-margin-bottom: 10rem;
+  margin-top: 8rem;
 align-items: center;
+margin-bottom: 10rem;
 
 }
 .txt-img > .text1:nth-child(2){
-margin-top: 5.5rem;
+margin-top: 7rem;
 align-items: center;
 margin-bottom: -20px;
 }
@@ -296,9 +313,13 @@ margin-bottom: -20px;
 
 .txt-img > .off-img:nth-child(2){
   margin-bottom: -100px;
-  background: red;
-
 }
+
+ .footerWrapper{
+  background-color: #15153f;
+  height: 50vh;
+
+ }
 
 
 

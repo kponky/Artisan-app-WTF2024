@@ -15,9 +15,9 @@ const Navbar = () => {
   <ul>
   <li>  <Link smooth to = '#'>Home</Link> </li>
   <li>  <Link  smooth to = '#aboutus'>About</Link> </li>
-  <li>  <Link  smooth to = '#offer'> Offer</Link> </li>
-  <li>  <Link  smooth to = '#testimonial'> Testimonials</Link> </li>
-  <li>  <Link  smooth to = '#community'> Community</Link> </li>
+  {/*<li>  <Link  smooth to = '#offer'> </Link> </li>*/}
+  {/*<li>  <Link  smooth to = '#testimonial'></Link> </li>  */}
+  {/*<li>  <Link  smooth to = '#community'></Link> </li>*/}
   <li>  <Link  smooth to = '#footer'>Contact us</Link> </li>
  
  </ul>

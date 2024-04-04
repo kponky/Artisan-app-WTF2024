@@ -4,7 +4,7 @@ import heropageimg1 from '../assets/Frame 7.png'
 
 const HeroSection = () => {
   return (
-    <div className='heroWrapper'>
+    <div className='heroWrapper' id='home'>
     
     <div className='heroText'>
     <h1>Empowering Artisans</h1>

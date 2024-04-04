@@ -8,7 +8,7 @@ import image4 from '../assets/Frame 9.png'
 
 const Offer = () => {
   return (
-    <div className='offerWrapper'>
+    <div className='offerWrapper'id='offer' >
     <section className='p-top'>
     <div className='offerText'>
     <h2>What We Offer</h2>

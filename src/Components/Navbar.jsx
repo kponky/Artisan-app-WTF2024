@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../assets/Logo.png'
 import '../App.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -11,9 +12,13 @@ const Navbar = () => {
     </div>
 
   <ul>
-  <li> <a href='#' > Home </a> </li>
-  <li> <a href='#' > About us </a> </li>
-  <li> <a href='#' > Contact us </a> </li>
+  <li>  <Link to= '/'>Home</Link> </li>
+  <li>  <Link to= '/aboutus'>About</Link> </li>
+  <li>  <Link to= '/offer'> Offer</Link> </li>
+  <li>  <Link to= '/testimonial'> Testimonials</Link> </li>
+  <li>  <Link to= '/community'> Community</Link> </li>
+  <li>  <Link to= '/footer'>Contact us</Link> </li>
+ 
  </ul>
 
   <div className='button'>
@@ -30,3 +35,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+

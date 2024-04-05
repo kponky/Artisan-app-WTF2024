@@ -38,7 +38,6 @@
 .navContainer{
   background-color: var(--navColor);
   overflow: hidden !important;
-
 }
 
 nav{
@@ -90,7 +89,13 @@ nav ul li {
 nav ul li  a{
   text-decoration:  none;
   color: #595959;
+}
 
+.navContainer ul li a.active {
+  color: #03045E; 
+  font-weight: 700;
+
+  
 }
 
 .btn{
@@ -605,7 +610,7 @@ color: #310dc1;
 
 
 .footer-bar{
-  color: #595959;
+  color: #FFFFFF;
   position: absolute;
   width: 100%;
   bottom: 50px;
@@ -634,8 +639,4 @@ color: #310dc1;
   left: 120px;
 
 }
-
-
-
-
 

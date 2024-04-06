@@ -10,7 +10,7 @@ const HeroSection = () => {
     <h1>Empowering Artisans</h1>
     <p>ArtCorner is more than just a marketplace, it’s your one-stop platform for discounted materials, skill enhancement, networking and direct sales.</p>
   
-    <div className='buttons'> 
+  <div className='buttons'> 
    <button className='btn' data-type='signup'> Sign up</button>
    <button className='btn' data-type='login'> Login</button>
     </div>

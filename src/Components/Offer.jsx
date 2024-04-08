@@ -41,12 +41,14 @@ const Offer = () => {
    
    <div className='txt-img'>
   
-   <div className='off-img'><img src= {image4} ></img></div>
 
    <div className='text1'> 
+   <div className='off-img'><img src= {image4} ></img></div>
+
    <h2>Product ShowCases</h2>
    <p>Your work deserves to be in the spotlight. Display your products in our virtual showroom and watch as customers from around the world admire and purchase your masterpieces.</p>
    </div>
+
   </div>
    
    <div className='txt-img'>

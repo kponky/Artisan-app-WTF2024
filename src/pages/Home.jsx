@@ -9,8 +9,9 @@ import Community from "../components/Community"
 const Home = () => {
   return (
     <div>
-          <HeroSection />
-      <Aboutus />
+    
+     <HeroSection />
+      <Aboutus/>
       <Offer />
       <Testiminial />
       <Community />

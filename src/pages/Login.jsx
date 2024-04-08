@@ -1,12 +1,13 @@
 import React from 'react'
 import LoginForm from '../components/LoginForm'
 
+
+
 const Login = () => {
   return (
-    <div>
-    <p>this is login page </p>
+    <div className='loginFormWrapper'>
     <LoginForm/>
-      
+     
     </div>
   )
 }

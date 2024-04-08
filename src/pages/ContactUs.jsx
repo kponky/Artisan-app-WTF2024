@@ -7,9 +7,9 @@ const ContactUs = () => {
   return (
 
     <div className='contactUsWrapper' id='contact'>
+
+    <p> this is my contact page</p>
    
-<p>    this is the contact form
-</p>      
     </div>
   )
 }

@@ -1,72 +1,85 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/Logo.png";
-import "../App.css";
-// import { Link } from 'react-router-dom'
 import { HashLink as Link } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { navLinks } from "../data/menu";
 
 const Navbar = () => {
+  const [showNav, setShowNav] = useState(false);
   const [activeLink, setActiveLink] = useState("");
+  const { pathname, hash } = useLocation();
+
+  const closeMenu = () => {
+    setNavActive(false);
+  };
+
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+    closeMenu();
   };
+
   return (
-    <div className="navContainer">
-      <nav>
-        <div className="logoWrapper">
-          <img src={logo} />
-        </div>
+    <nav className="navbar">
+    <div className="inner-navbar">
+      <div className="navbar-logo">
+        <img src={logo} />
+      </div>
 
-        <ul>
-          <li>
-            {" "}
-            <Link
-              smooth
-              to="/"
-              onClick={() => handleLinkClick("home")}
-              className={activeLink === "home" ? "active" : ""}
-            >
-              {" "}
-              Home{" "}
-            </Link>{" "}
-          </li>
-          <li>
-            {" "}
-            <Link
-              smooth
-              to="/#aboutus"
-              onClick={() => handleLinkClick("about")}
-              className={activeLink === "about" ? "active" : ""}
-            >
-              About
-            </Link>{" "}
-          </li>
-          {/*<li>  <Link  smooth to = '#offer'> </Link> </li>*/}
-          {/*<li>  <Link  smooth to = '#testimonial'></Link> </li>  */}
-          {/*<li>  <Link  smooth to = '#community'></Link> </li>*/}
-          <li>
-            {" "}
-            <Link
-              smooth
-              to="/contact-us"
-              onClick={() => handleLinkClick("contact-us")}
-              className={activeLink === "contact-us" ? "active" : ""}
-            >
-              Contact us
-            </Link>{" "}
-          </li>
-        </ul>
+      <ul className={`navbar--items ${showNav ? "show" : ""}`}>
+        {navLinks.map(({ href, name }, i) => {
+          const isActive = pathname === href || (hash && hash.includes(href));
+          return (
+            <li key={i}>
+              <Link
+                spy='true'
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to={href}
+                className={`navbar-content ${isActive ? "active" : ""}`}
+              onClick={toggleNav}>
+                {name}
+              </Link>
+            </li>
+          );
+        })}
+        <li className="mob-btn">
+          <button className="btn"> Sign up</button>
+        </li>
+      </ul>
+      <div className="nav-btn">
+        <button className="btn"> Sign up</button>
+      </div>
 
-        <div className="button">
-          <Link to="/signup">
-            <button className="btn" data-type="signup">
-              Sign up
-            </button>
-          </Link>
-        </div>
-      </nav>
-    </div>
+      <div className="menubtn" onClick={toggleNav}>
+        {showNav ? "Close" : "Menu"}
+      </div>
+      </div>
+    </nav>
   );
 };
 
 export default Navbar;
+
+// <div className='navbar-container'>
+
+//     <div className='Navlogo'>      <img src={logo}/>
+//     </div>
+
+//     <div className='navbar-links'>
+//     <Link smooth to  = "/">Home</Link>
+//     <Link smooth to  = "/">About</Link>
+//     <Link smooth to  = "/">Contact us</Link>
+
+//     </div>
+
+//     <div className='nav-btn'>
+//     <button  className='btn'> Sign up</button>
+//     </div>
+
+//     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import '../App.css'
 import aboutUsImg from '../assets/Frame 8.png'
 
+
 const Aboutus = () => {
   return (
     <div className='aboutUsWrapper' id='aboutus' >
@@ -13,7 +14,7 @@ const Aboutus = () => {
     </section>
 
     <div className='aboutImg'>
-    <img src= {aboutUsImg} alt='black woman with afro in a peach gym wear'/>
+    <img src= {aboutUsImg} alt='black woman with afro hair in a peach  color gym wear'/>
     
     </div>
    

@@ -248,6 +248,8 @@ img {
   width: 100%;
   height: 100%;
 }
+/* styling for hero page ends here */
+
 
 /* About us stylinf start here */
 
@@ -285,6 +287,10 @@ img {
   margin: auto;
   margin-bottom: 10px;
 }
+
+/* Aboutus styling ends here  */
+
+
 
 .grid-images {
   display: grid;
@@ -366,7 +372,7 @@ img {
   background: var(--backgroundColor);
   padding: 14.33px 85.33px;
   margin-top: 4px;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
 }
@@ -454,17 +460,7 @@ img {
   left: 480px;
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  top: 36px;
-  font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
-  letter-spacing: 0;
-  font-variant: initial;
-  line-height: 1;
-  position: absolute;
-}
+
 
 .swiper-pagination {
   position: absolute;
@@ -493,13 +489,75 @@ img {
 
 
 
+/* styling for community starts here  */
+
+.communityWraper {
+  background-image: url(/src/assets/frame\ people.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  z-index: -1;
+}
+
+.communityContent {
+  position: relative;
+  z-index: 1;
+  padding: 14.33px 85.33px;
+  top: 100px;
+  left: 0;
+  gap: 32px;
+  height: 299px;
+  width: 681px;
+  text-align: left;
+}
+
+.communityContent h3 {
+  width: 681px;
+  height: 213px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 57.8px;
+  color: #fff;
+}
+
+
+.communityContent .buttons .btn {
+  border: none;
+}
+
+.communityBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: #080bc755; */
+  /* background-image: url(/src/assets/frame\ people.jpg); */
+  background-position: center;
+  background-size: cover;
+  /* filter: blur(1px);  */
+}
+
+.communityBackground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(40, 8, 168, 0.5), rgba(52, 44, 128, 0.5));
+  /* Adjust opacity (0.5) as needed */
+  /* z-index: 9; */
+
+}
 
 
 
 
-/* Aboutus styling ends here  */
 
-/* styling for hero page ends here */
+
+/* styling for community ends here  */
 
 
 @media screen and (max-width: 768px) {
@@ -586,9 +644,21 @@ img {
     text-align: left;
   }
 
+  .slide {
+    width: 100%;
+    height: 461px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* padding: 20px 10px; */
+    justify-content: center;
+    align-items: center;
+}
+
   .slidetext {
+    display: flex;
     position: relative;
-    /* top: 10%; */
+    text-align: left;
     left: 0;
     columns: red;
   }
@@ -596,11 +666,21 @@ img {
   .slidetext p {
     color: #CDCDDF;
     font-size: 24px;
-    line-height: 28.8px;
+    line-height: 20.8px;
     font-weight: 400;
     padding: 12px;
     width: 100%;
+    text-align: left;
 
+  }
+
+
+  .right-icon {
+    color: #CDCDDF;
+    position: absolute;
+    right: 30px;
+    bottom:  40px;
+  
   }
 
 
@@ -718,7 +798,6 @@ img {
     display: flex;
     margin: auto;
     width: 100%;
-
   }
 
   .aboutUsWrapper p,
@@ -764,4 +843,97 @@ img {
    
   }
 
+  .Testimonialwrapper {
+    background: var(--backgroundColor);
+    padding: 9.33px 30.33px;
+    margin-top: 4px;
+    height: 100%;
+    width: 100%;
+  
+  
+  }
+
+
+  .slide {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* padding: 20px 10px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.slidetext {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slidetext p {
+  color: #CDCDDF;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 400;
+  width: 100%;
+  padding: 1px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 40PX;
+}
+
+.quote-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.quote-icon:nth-child(1) {
+  color: hsl(58, 95%, 49%);
+  position: absolute;
+  top: -20px;
+  left: -5px;
+}
+
+.right-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: hsl(58, 95%, 49%);
+
+}
+
+.communityWraper{
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+     align-self: center;
+}
+
+.communityContent h3 {
+  width: 100%;
+  height: 213px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37.8px;
+  color: #fff;
+}
+
+.communityContent {
+  position: relative;
+  z-index: 1;
+  padding: 0 10px 10px 20px;
+  top: 100px;
+  left: 0;
+  gap: 30px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  }
+  .communityContent .buttons .btn {
+ margin: auto;
+ width: 200px;
+  }
+  
 }

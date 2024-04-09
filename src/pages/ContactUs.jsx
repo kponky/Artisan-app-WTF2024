@@ -1,15 +1,12 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
+import ContactForm from '../components/ContactForm'
 
 const ContactUs = () => {
-
-  
   return (
 
-    <div className='contactUsWrapper' id='contact'>
-
-    <p> this is my contact page</p>
-   
+    <div className='contact-Wrapper'>
+    <ContactForm/>
+    
     </div>
   )
 }

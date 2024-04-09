@@ -52,9 +52,13 @@ const Navbar = () => {
           <button className="btn"> Sign up</button>
         </li>
       </ul>
+      <Link to="/signup">
+           
       <div className="nav-btn">
         <button className="btn"> Sign up</button>
       </div>
+     </Link>
+          
 
       <div className="menubtn" onClick={toggleNav}>
         {showNav ? "Close" : "Menu"}

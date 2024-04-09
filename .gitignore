@@ -22,3 +22,45 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+to be used later 
+
+
+import { Form, Field, ErrorMessage, withFormik } from "formik";
+import * as Yup from "yup";
+
+const App = ({ values }) => (
+  <div className={styles.container}>
+    <Head>
+      <title>Formik Form</title>
+    </Head>
+    <Form>
+      //form stuffs here
+      <button type="submit" className={"disabled-btn"}>
+        Sign In
+      </button>
+    </Form>
+  </div>
+);
+
+const FormikApp = withFormik({
+  mapPropsToValues: ({ email, select, checkbox, radio }) => {
+    return {
+      email: email || "",
+      select: select || "",
+      checkbox: checkbox || false,
+      radio: radio || "",
+    };
+  },
+  validationSchema: Yup.object().shape({
+    select: Yup.string().required("Color is required!"),
+    email: Yup.string().email().required("Email is required"),
+    checkbox: Yup.bool().oneOf([true], "Checkbox is required"),
+    radio: Yup.string().required("Radio is required!"),
+  }),
+  handleSubmit: (values) => {
+    alert(JSON.stringify(values));
+  },
+})(App);
+
+export default FormikApp;

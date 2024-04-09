@@ -5,7 +5,7 @@ import LoginForm from '../components/LoginForm'
 
 const Login = () => {
   return (
-    <div className='loginFormWrapper'>
+    <div>
     <LoginForm/>
      
     </div>

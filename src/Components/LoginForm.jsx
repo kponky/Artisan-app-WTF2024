@@ -1,22 +1,10 @@
-import React,{useState} from 'react'
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import "../App.css";
-// import logo from "../assets/Logo.png";
-// import groupVector from "../assets/Group.png";
-
-
+import React from 'react'
 
 const LoginForm = () => {
-
-  onst [formData, setFormData] = useState({
-    email: "",
-    password: ""
-      
-  });
   return (
     <div>
-      this is my login form
+      this my login page 
+      <input> home page </input>
     </div>
   )
 }

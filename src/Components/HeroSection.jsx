@@ -17,12 +17,12 @@ const HeroSection = () => {
         </p>
 
         <div className="buttons">
-          <Link to="/login">
+          <Link to="/signup">
             <button className="btn signup">
               Sign up
             </button>
           </Link>
-          <Link to="/signup">
+          <Link to="/login">
             <button className="btn login">
               Login
             </button>

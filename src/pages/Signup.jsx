@@ -5,6 +5,7 @@ const Signup = () => {
   return (
     <div className='signup-container'>
      <SignupForm/>
+     
     </div>
   );
 };

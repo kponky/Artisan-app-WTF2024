@@ -18,9 +18,8 @@ import { HashLink as Link } from "react-router-hash-link";
 const Footer = () => {
   return (
     <div className="footerWrapper" id="footer">
-      <div className="footerContent">
         <div className="footer-col">
-          <img src={whiteLogo} />
+          <img src={whiteLogo}  className="footer-logo"/>
           <ul className="footerItems">
             <li>20th Pagham Avenue</li>
             <li>Tinmersale</li>
@@ -29,12 +28,14 @@ const Footer = () => {
           </ul>
 
           <div className="footer-socials">
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faLinkedin} />
-            <FontAwesomeIcon icon={faTwitter} />
-          </div>
+          <FontAwesomeIcon icon={faFacebook} />
+          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faTwitter} />
         </div>
+          </div>
+
+       
 
         <div className="footerLinks">
           <div className="footer-col">
@@ -52,39 +53,39 @@ const Footer = () => {
               <p>1234 Street Name </p>
             </div>
           </div>
-
+          </div>
           <div className="footer-col">
             <h6>Our Services</h6>
             <ul className="footer-links">
               <li>
-                {" "}
+                
                 <Link smooth to="#">
                   Home
-                </Link>{" "}
+                </Link>
               </li>
               <li>
                 <Link smooth to="#aboutus">
                   About
-                </Link>{" "}
+                </Link>
               </li>
               {/*<li>  <Link  smooth to = '#testimonial'></Link> </li>  */}
               {/*<li>  <Link  smooth to = '#community'></Link> </li>*/}
               <li>
                 {" "}
                 <Link smooth to="#offer">
-                  What We Offer{" "}
-                </Link>{" "}
+                  What We Offer
+                </Link>
               </li>
               <li>
                 {" "}
                 <Link smooth to="#footer">
                   Contact us
-                </Link>{" "}
+                </Link>
               </li>
             </ul>
           </div>
-        </div>
-      </div>
+     
+
 
       <div className="footer-bar">
         <p>

@@ -153,8 +153,6 @@ const SignupForm = () => {
         <button type="button" className="btn formBtn googlebtn"> <img src= {googleIcon} /> Google</button>
         <button type="button" className="btn formBtn outlookbtn"> <img src= {outlookIcon} /> Outlook</button>
 
-
-
       </div>
       <div className="vectorSection">
         <img src={groupVector} alt="Illustration" />

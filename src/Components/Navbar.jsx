@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-    <div className="inner-navbar">
+    <div className="inner-navbar container">
       <div className="navbar-logo">
         <img src={logo} />
       </div>

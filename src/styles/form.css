@@ -1,0 +1,201 @@
+.signupform-wrapper, .loginform-wrapper {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.signupform-wrapper .signup-form-container .form-logo,
+.loginform-wrapper .login-form-container .form-logo{
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.signupform-wrapper .signup-form-container .form-logo img,
+.loginform-wrapper .login-form-container .form-logo img
+ {
+  width: 100%;
+  height: 100%;
+}
+
+.signup-form-container .form-text h6,
+.login-form-container .form-text h6{
+  font-size: 32px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+.signup-form-container .form-card, 
+.login-form-container .form-card{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.signup-form-container .form-card .form-group,
+.login-form-container .form-card .form-group{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  margin-bottom: 10px;
+}
+
+
+.form-card .form-group .form-control {
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  resize: none;
+  /* outline: none; */
+}
+
+.password {
+  position: relative;
+  display: flex;
+}
+
+.form-card .form-group .form-control:focus {
+  outline: 0;
+  border: 1px solid var(--buttonColorLight);
+}
+
+
+.form-group .icon {
+  position: absolute;
+  bottom: 19px;
+  right: 8px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  color: #8a8a8d;
+}
+
+.signup-form-container .checkbox-card,
+.login-form-container .checkbox-card {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.signup-form-container .form-card .form-btn,
+.login-form-container .form-card .form-btn,
+.google-outlook-btn .googlebtn,
+.google-outlook-btn .outlookbtn {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 60px;
+
+
+}
+
+.signup-form-container .form-card .form-btn:hover,
+.login-form-container .form-card .form-btn:hover {
+  border: 2px solid var(--buttonColor);
+}
+
+.signup-form-container .form-acc,
+.login-form-container .form-acc{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.form-acc p {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.form-acc p a {
+  text-decoration: none;
+  color: var(--buttonColorLight);
+}
+
+.signup-form-container .form-acc span,
+.login-form-container .form-acc span {
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  align-items: center;
+}
+
+
+.signup-form-container .form-acc span > div,
+.login-form-container .form-acc span > div {
+  width: 140px;
+  background: var(--buttonColor);
+  height: 2px;
+
+
+}
+
+.google-outlook-btn .googlebtn .g-btn-img,
+.google-outlook-btn .outlookbtn .o-btn-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+
+}
+
+.google-outlook-btn .googlebtn,
+.google-outlook-btn .outlookbtn {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  height: 60px;
+}
+
+.google-outlook-btn .googlebtn:hover{
+  border: 2px solid var(--buttonColor);
+}
+
+.signup-form-container .google-outlook-btn .outlookbtn,
+.login-form-container .google-outlook-btn .outlookbtn {
+  background-color: #fff;
+  border: 2px solid var(--buttonColor);
+  color: var(--buttonColor);
+  height: 60px;
+  margin-top: 20px;
+
+}
+
+.signup-form-container .google-outlook-btn .outlookbtn:hover,
+.login-form-container .google-outlook-btn .outlookbtn:hover{
+  background-color: var(--buttonColor);
+  color: #fff;
+}
+
+.signupform-wrapper .vectorSection,
+.loginform-wrapper .vectorSection{
+  background-color: var(--backgroundColor);
+}
+
+.signupform-wrapper .vectorSection,
+.loginform-wrapper .vectorSection{
+  position: relative;
+
+}
+
+.signupform-wrapper .vectorSection img,
+.loginform-wrapper .vectorSection img{
+  width: 650px;
+  height: 400px;
+  object-fit: contain;
+   opacity: 0px;
+   position: absolute;
+   top: 200px;
+   left: -100px;
+   /* transform: translate(50% 50%); */
+
+}
+

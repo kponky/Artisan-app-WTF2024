@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import "../App.css";
+import "../styles/form.css";
 import logo from "../assets/Logo.png";
 import groupVector from "../assets/Group.png";
 import googleIcon from '../assets/Google.png'
 import outlookIcon from  '../assets/Outlook.png'
+import { Link } from "react-router-dom";
 // import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 const SignupForm = () => {
@@ -45,14 +46,14 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="signupFormWrapper">
-      <div className="signup-form-container">
-        <img src={logo} alt="Logo" />
-        <div className="formText">
+    <div className="signupform-wrapper ">
+      <div className="signup-form-container container">
+        <img src={logo} alt="Logo" className="form-logo" />
+        <div className="form-text">
           <h6>Hi, Welcome to ArtCorner!</h6>
           <p>Create an account and start enjoying ArtCorner</p>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form-card">
           <div className="form-group">
             <label htmlFor="fullName">Enter Full Name</label>
             <input
@@ -62,6 +63,7 @@ const SignupForm = () => {
               placeholder="Evelyn Matt"
               value={formData.fullName}
               onChange={handleChange}
+              className="form-control"
               required
             />
           </div>
@@ -74,6 +76,8 @@ const SignupForm = () => {
               placeholder="Evelyn Matt"
               value={formData.fullName}
               onChange={handleChange}
+              className="form-control"
+
               required
             />
           </div>
@@ -86,6 +90,8 @@ const SignupForm = () => {
               placeholder="Evelynnmett@gmail.com"
               value={formData.username}
               onChange={handleChange}
+              className="form-control"
+
               required
             />
           </div>
@@ -98,6 +104,8 @@ const SignupForm = () => {
               placeholder="atleast8characters"
               value={formData.password}
               onChange={handleChange}
+              className="form-control password-card"
+
               required
             />
             <FontAwesomeIcon
@@ -115,6 +123,7 @@ const SignupForm = () => {
               placeholder="atleast8characters"
               value={formData.confirmPassword}
               onChange={handleChange}
+              className="form-control password-card"
               required
             />
             <FontAwesomeIcon
@@ -124,12 +133,13 @@ const SignupForm = () => {
             />
           </div>
 
-          <div className="form-group checkbox">
+          <div className="checkbox-card">
             <label>
               <input
                 type="checkbox"
                 id="agreeToPrivacy"
                 name="agreeToPrivacy"
+                className="checked"
                 // checked={formData.agreeToPrivacyPolicy}
                 // onChange={handleChange}
                 required
@@ -141,17 +151,20 @@ const SignupForm = () => {
            </span>
           </div>
 
-          <button type="submit" className="btn formBtn">Sign Up</button>    
+          <button type="submit" className="btn form-btn">Sign Up</button>    
         </form>
 
-        <div className="formAcc">
-        <p>Already have an account <a href="#">Sign in</a>  </p>
+        <div className="form-acc">
+        <p>Already have an account <Link smooth to = "/login">Sign in </Link> </p>
 
         <span> <div></div>or Continue with <div></div></span> 
         </div>
 
-        <button type="button" className="btn formBtn googlebtn"> <img src= {googleIcon} /> Google</button>
-        <button type="button" className="btn formBtn outlookbtn"> <img src= {outlookIcon} /> Outlook</button>
+        <div className="google-outlook-btn">
+        
+        <button type="button" className="btn form-btn googlebtn"> <img src= {googleIcon} className="g-btn-img" /> Google</button>
+        <button type="button" className="btn form-btn outlookbtn"> <img src= {outlookIcon} className="o-btn-img" /> Outlook</button>
+        </div>
 
       </div>
       <div className="vectorSection">

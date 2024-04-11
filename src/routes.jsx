@@ -16,7 +16,7 @@ const AppRoutes = () => {
           <Route index element={<Home />} />
           <Route path="/contact-us" element={<ContactUs />} />
         </Route>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>

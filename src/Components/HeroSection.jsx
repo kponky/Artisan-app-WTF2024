@@ -6,7 +6,7 @@ import { HashLink as Link } from "react-router-hash-link";
 
 const HeroSection = () => {
   return (
-    <div className="heroWrapper" id="home">
+    <div className="heroWrapper " id="home">
     <div className="hero-content">
       <div className="heroText">
         <h1>Empowering Artisans</h1>

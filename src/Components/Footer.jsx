@@ -17,7 +17,7 @@ import { HashLink as Link } from "react-router-hash-link";
 
 const Footer = () => {
   return (
-    <div className="footerWrapper" id="footer">
+    <div className="footerWrapper " id="footer">
         <div className="footer-col">
           <img src={whiteLogo}  className="footer-logo"/>
           <ul className="footerItems">
@@ -51,7 +51,7 @@ const Footer = () => {
             <div>
               <FontAwesomeIcon icon={faMapMarkerAlt} className="footer-icon" />
               <p>1234 Street Name </p>
-            </div>
+            </div> 
           </div>
           </div>
           <div className="footer-col">

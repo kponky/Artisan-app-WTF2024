@@ -5,7 +5,7 @@ import aboutUsImg from '../assets/Frame 8.png'
 
 const Aboutus = () => {
   return (
-    <div className='aboutUsWrapper' id='aboutus' >
+    <div className='aboutUsWrapper container' id='aboutus' >
     <section className='p-top'>
     <div className='aboutus-text'>
     <h2> About Us</h2>

@@ -1,0 +1,161 @@
+.contact-wrapper {
+  position: relative;
+}
+
+.contact-header {
+  background: url(../assets/unsplash_yFbyvpEGHFQ.png);
+  height: 572px;
+  background-repeat: no-repeat;
+  color: white;
+  width: 100%;
+  background-size: cover;
+  padding: 110px 140.33px;
+}
+
+.contact-header h2 {
+  font-size: 56px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 120px;
+}
+
+.contact-header p {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 28px;
+  height: 84px;
+  width: 488px;
+}
+
+.contact-wrapper .contact-section {
+  position: relative;
+  height: 600px;
+}
+
+.contact-wrapper .contact-section .contact-card {
+  width: 996px;
+  /* margin-inline: auto; */
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contact-section .contact-card .contact-form {
+  grid-column: span 3;
+  padding: 32px;
+}
+
+.contact-card .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-card .contact-form form h6 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 36px;
+
+}
+
+.contact-form form .input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .input-group label {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-form .input-group .form-control {
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  resize: none;
+  /* outline: none; */
+}
+
+.contact-form .input-group .form-control:focus {
+  outline: 0;
+  border: 1px solid var(--buttonColorLight);
+}
+
+
+.contact-section .contact-card .contact-address {
+  grid-column: span 2;
+  background-color: var(--backgroundColor);
+  color: #fff;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card .contact-address .contact-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-card .contact-address h6 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+
+.contact-address .contact-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.googlemap-wrapper {
+  margin-top: auto;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .contact-header{
+    padding: 110px 35.33px;
+
+  }
+
+  .contact-wrapper .contact-section{
+    height: 100%;
+  }
+  .contact-wrapper .contact-section .contact-card {
+    position: relative;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .contact-section .contact-card .contact-form, .contact-card .contact-address  {
+    grid-column: span 1;
+}
+
+
+.contact-card .contact-form, .contact-section .contact-card .contact-address{
+padding-block: 4rem !important;
+}
+
+.googlemap-wrapper {
+  margin-top: 3rem;
+}
+
+.contact-header p{
+  width: 100%;
+}
+}

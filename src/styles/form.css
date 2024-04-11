@@ -1,39 +1,54 @@
-.signupform-wrapper, .loginform-wrapper {
-  padding-top: 10px;
+.signupform-wrapper,
+.loginform-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
+.signup-form-container,
+.login-form-container {
+  padding-top: 10px;
+
+}
+
 .signupform-wrapper .signup-form-container .form-logo,
-.loginform-wrapper .login-form-container .form-logo{
-  width: 55px;
-  height: 55px;
+.loginform-wrapper .login-form-container .form-logo {
+  width: 50px;
+  height: 50px;
   object-fit: contain;
 }
 
 .signupform-wrapper .signup-form-container .form-logo img,
-.loginform-wrapper .login-form-container .form-logo img
- {
+.loginform-wrapper .login-form-container .form-logo img {
   width: 100%;
   height: 100%;
 }
 
 .signup-form-container .form-text h6,
-.login-form-container .form-text h6{
+.login-form-container .form-text h6 {
   font-size: 32px;
-  line-height: 50px;
+  line-height: 40px;
   font-weight: 700;
 }
 
-.signup-form-container .form-card, 
-.login-form-container .form-card{
+.signup-form-container .form-text p,
+.login-form-container .form-text p {
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.signup-form-container .form-card,
+.login-form-container .form-card {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .signup-form-container .form-card .form-group,
-.login-form-container .form-card .form-group{
+.login-form-container .form-card .form-group {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,7 +58,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 22.4px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 
@@ -84,18 +99,55 @@
   justify-content: center;
   gap: 15px;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 8px;
 }
+
+.login-form-container .checkbox-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.login-form-container .checkbox-card label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* .checkbox-card input[type = "checkbox"]{
+  display: none;
+} */
+
+/* .checkbox-card input[type = "checkbox"]::before{
+content: "";
+display: inline-block;
+width: 20px;
+height: 20px;
+border: 2px solid #ccc;
+background-color: #700808;
+border: 10px;
+margin-right: 10px;
+vertical-align: middle;
+} */
+
+/* .checkbox-card input[type = "checkbox"]:checked::before{
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.checkbox-card label{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+} */
 
 .signup-form-container .form-card .form-btn,
 .login-form-container .form-card .form-btn,
 .google-outlook-btn .googlebtn,
 .google-outlook-btn .outlookbtn {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   height: 60px;
-
-
 }
 
 .signup-form-container .form-card .form-btn:hover,
@@ -104,10 +156,10 @@
 }
 
 .signup-form-container .form-acc,
-.login-form-container .form-acc{
+.login-form-container .form-acc {
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .form-acc p {
@@ -115,7 +167,8 @@
   padding-bottom: 10px;
 }
 
-.form-acc p a {
+.form-acc p a,
+.checkbox-card span a {
   text-decoration: none;
   color: var(--buttonColorLight);
 }
@@ -129,13 +182,13 @@
 }
 
 
-.signup-form-container .form-acc span > div,
-.login-form-container .form-acc span > div {
+
+
+.signup-form-container .form-acc span>div,
+.login-form-container .form-acc span>div {
   width: 140px;
   background: var(--buttonColor);
   height: 2px;
-
-
 }
 
 .google-outlook-btn .googlebtn .g-btn-img,
@@ -155,7 +208,7 @@
   height: 60px;
 }
 
-.google-outlook-btn .googlebtn:hover{
+.google-outlook-btn .googlebtn:hover {
   border: 2px solid var(--buttonColor);
 }
 
@@ -170,32 +223,56 @@
 }
 
 .signup-form-container .google-outlook-btn .outlookbtn:hover,
-.login-form-container .google-outlook-btn .outlookbtn:hover{
+.login-form-container .google-outlook-btn .outlookbtn:hover {
   background-color: var(--buttonColor);
   color: #fff;
 }
 
 .signupform-wrapper .vectorSection,
-.loginform-wrapper .vectorSection{
+.loginform-wrapper .vectorSection {
   background-color: var(--backgroundColor);
 }
 
 .signupform-wrapper .vectorSection,
-.loginform-wrapper .vectorSection{
+.loginform-wrapper .vectorSection {
   position: relative;
 
 }
 
 .signupform-wrapper .vectorSection img,
-.loginform-wrapper .vectorSection img{
+.loginform-wrapper .vectorSection img {
   width: 650px;
   height: 400px;
   object-fit: contain;
-   opacity: 0px;
-   position: absolute;
-   top: 200px;
-   left: -100px;
-   /* transform: translate(50% 50%); */
+  opacity: 0px;
+  position: absolute;
+  top: 190px;
+  right: 0;
+  /* transform: translate(50% 50%); */
 
 }
 
+
+@media screen and (max-width: 768px) {
+
+  .loginform-wrapper,
+  .signupform-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .signupform-wrapper .vectorSection img,
+  .loginform-wrapper .vectorSection img {
+    width: 350px;
+    object-fit: contain;
+    opacity: 0px;
+    top: 0;
+    left: 10px;
+
+  }
+
+  .signupform-wrapper .vectorSection,
+.loginform-wrapper .vectorSection {
+  background-color: var(--backgroundColor);
+}
+
+}

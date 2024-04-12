@@ -1,0 +1,127 @@
+a{
+  text-decoration: none;
+  }
+
+  ul{
+    list-style: none;
+  }
+
+
+
+.footer-wrapper{
+  background-color: var(--backgroundColor);
+  color: white;
+  width: 100%;
+}
+
+.footer-wrapper .footer-card{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 110px;
+  padding-bottom: 50px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(5, minmax(0, 1fr)); */
+}
+
+.footer-wrapper .footer-card .footer-logo{
+  width: 54px;
+  height: 50px;
+  object-fit: contain;
+}
+
+
+.footer-wrapper .footer-card .footer-col{
+  color: #fff;
+  font-weight: 400;
+  size: 17px;
+  line-height: 25.2px;
+  text-align: left;
+}
+
+.footer-wrapper .footer-card .footer-col h6{
+  font-size: 24px;
+  line-height: 28.8px;
+  font-weight: 700;
+  align-items: center;
+  
+}
+
+.footer-card .footer-col .footer-items li{
+  margin-top: 10px;
+}
+
+.footer-card .footer-col .footer-socials{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.footer-card .footer-col .footer-socials .icon:hover{
+  color: #0c78ea;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.footer-card .footer-contactus > div{
+display: flex;
+margin-top: 25px;
+gap: 20px;
+font-weight: 400;
+size: 18px;
+
+}
+
+.footer-card .footer-col .footer-links li {
+  margin-top: 20px;
+ 
+}
+
+.footer-card .footer-col .footer-links li a{
+  color: white;
+  transition: all 0.3s ease-in;
+
+}
+
+.footer-card .footer-col .footer-links li a:hover{
+  color: #0c78ea;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.footer-wrapper .footer-bar{
+  text-align: center;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.footer-wrapper .footer-bar::before{
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background: rgb(180, 174, 174);
+  top: -10px;
+  left: 100px;
+
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    padding: 20px  20px;
+  }
+  
+  .footer-card {
+ display: flex;
+ flex-direction: column;
+ gap: 50px;
+}
+
+.footer-wrapper .footer-bar::before{
+ width: 100%;
+ left: 0;
+}
+
+}

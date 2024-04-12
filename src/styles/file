@@ -1,0 +1,166 @@
+
+.footerWrapper {
+  height: 525px;
+  width: 100%;
+  background: #01011F;
+  position: relative;
+  padding: 18px 20.33px;
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  gap: 10px;
+
+
+}
+
+.footer-logo {
+  width: 100px;
+  height: 50px;
+  object-fit: contain;
+
+}
+
+/* .footerContent {
+  display: flex;
+  position: absolute;
+  top: 125.5px;
+  left: 120px;
+  gap: 280px;
+  height: 274px;
+} */
+
+
+.footer-col {
+  color: #fff;
+  font-weight: 400;
+  size: 18px;
+  line-height: 25.2px;
+  height: 24px;
+  gap: 10px;
+  text-align: left;
+  padding: 90px 83.33px;
+
+}
+
+.footer-col img {
+  margin-bottom: 15px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  padding-top: 10px;
+  font-size: 19px;
+  color: #fff;
+}
+
+/* .footerLinks {
+  display: flex;
+  gap: 250px;
+} */
+
+.footer-col h6 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-weight: 700;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footerItems {
+  line-height: 30.2px;
+
+
+}
+
+.footer-col>div {
+  display: flex;
+  font-weight: 400;
+  size: 18px;
+  line-height: 30.2px;
+  height: 25px;
+  text-align: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-col>ul {
+  list-style: none;
+
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+  line-height: 30.9px;
+  transition: all 0.3s ease-in;
+}
+
+.footer-bar {
+  color: #FFFFFF;
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-bar p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19.6px;
+
+}
+
+.footer-bar::after {
+  content: '';
+  /* top: 30px; */
+  bottom: 50px;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  border: 1px solid #BFBFBF;
+  left: 100px;
+}
+
+.footer-links li a:hover {
+  color: #080bc7;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.footerWrapper {
+  width: 100%;
+  background: #01011F;
+  padding: 1px 8px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: red;
+}
+
+
+
+/* .footer-col {
+  color: #fff;
+  font-weight: 400;
+  size: 17px;
+  line-height: 25.2px;
+  gap: 10px;
+  text-align: left;
+  padding: 10px 13.33px;
+
+} */
+
+/* 
+.footer-bar::after {
+  left: 50px;
+} */
+
+

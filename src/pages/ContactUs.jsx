@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../Components/ContactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,

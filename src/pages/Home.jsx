@@ -1,9 +1,9 @@
 import React from "react";
-import HeroSection from "../components/HeroSection"
-import Aboutus from '../components/Aboutus'
-import Offer from '../components/Offer'
-import Testiminial from '../components/Testiminial'
-import Community from "../components/Community"
+import HeroSection from "../Components/HeroSection"
+import Aboutus from '../Components/Aboutus'
+import Offer from '../Components/Offer'
+import Testiminial from '../Components/Testiminial'
+import Community from "../Components/Community"
 
 
 const Home = () => {

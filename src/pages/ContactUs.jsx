@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import ContactForm from "../components/ContactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -12,6 +10,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import ContactForm from "../Components/ContactForm";
 
 const ContactUs = () => {
   return (
@@ -27,8 +26,8 @@ const ContactUs = () => {
       <section className="contact-section">
         <div className="contact-card">
           {/* contact form */}
+          <ContactForm/>
 
-          <ContactForm />
           <div className="contact-address">
             <h6>Contact Information</h6>
             <div className="contact-icon">

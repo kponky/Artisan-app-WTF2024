@@ -534,41 +534,38 @@ img {
 
 
 @media screen and (max-width: 768px) {
+  
   .navbar .navbar--items {
     display: none;
     position: absolute;
     width: 100%;
-    top: 84.67px;
-    background: #fff;
-    height: calc(70vh - 84.67px);
+    top: 86px;
+    background: #3058e9;
+    height: calc(90vh - 67px);
     transition: top 0.3s ease-in-out;
-    /* background-color: transparent; */
-    align-items: left;
-    line-height: 30px;
-    padding: 60px 30px;
-
-
-    /* left: ; */
-
+    line-height: 1px;
+    padding: 2px 10px;
+    align-items: center;
   }
+  
 
   .inner-navbar {
-
-    padding-inline: 25px;
-
+    padding-inline: 25px;  
   }
 
   .navbar .navbar--items a {
     transition: .3s;
-    font-size: 30px;
-    color: #03045E;
+    font-size: 20px;
+    /* color: #03045E; */
+    color: #fff;
+
 
   }
 
   .navbar .navbar--items a:hover {
     transition: .3s;
-    font-size: 32px;
-    color: #080bc7;
+    font-size: 28px;
+    color: #0748fa;
     font-weight: bold;
   }
 
@@ -587,34 +584,27 @@ img {
     flex-direction: column;
     transform: translateY(0);
     transition: 0.3s all ease;
-    line-height: 100px;
-    background: #fff;
+    line-height: 70px;
+    background: #031e80;
+    width: 100%;
+    color: #fff;
+    justify-content: center;
+
     /* top: 60px; */
   }
 
   .navbar .btn {
-    width: 200px;
-    font-size: 20px;
+    width: 190px;
+    font-size: 20px;background-color: white;
+    color: var(--buttonColor);
+
   }
 
   .navbar .btn:hover {
     background-color: transparent;
-    border: 2px solid var(--buttonColor);
+    border: 2px solid #fff;
+    color: white;
   }
-
-  /* 
-  .grid-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 13px 20px;
-    text-align: left;
-  }
-
-  .txt-img .text1 {
-    text-align: justify;
-  } */
-
 
 
   .Testimonialwrapper {

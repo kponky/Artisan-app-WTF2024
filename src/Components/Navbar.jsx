@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import logo from "../assets/Logo.png";
 import { HashLink as Link } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { navLinks } from "../data/menu";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
-  const [activeLink, setActiveLink] = useState("");
+  // const [activeLink, setActiveLink] = useState("");
   const { pathname, hash } = useLocation();
 
   const closeMenu = () => {

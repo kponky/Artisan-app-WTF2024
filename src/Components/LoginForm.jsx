@@ -4,8 +4,8 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import "../styles/form.css";
 import logo from "../assets/Logo.png";
 import groupVector from "../assets/Group.png";
-import googleIcon from '../assets/Google.png'
-import outlookIcon from  '../assets/Outlook.png'
+import googleIcon from "../assets/Google.png";
+import outlookIcon from "../assets/Outlook.png";
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {
@@ -46,12 +46,11 @@ const LoginForm = () => {
       <div className="login-form-container container">
         <img src={logo} alt="Logo" className="form-logo" />
         <div className="form-text">
-          <h6>Hi, Welcome to ArtCorner!</h6>
-          <p>Create an account and start enjoying ArtCorner</p>
+          <h6>Hi, Welcome back!! </h6>
+          <p>Login to your account to enjoy</p>
         </div>
         <form onSubmit={handleSubmit} className="form-card">
-         
-             <div className="form-group">
+          <div className="form-group">
             <label htmlFor="Email">Enter Email</label>
             <input
               type="email"
@@ -61,7 +60,6 @@ const LoginForm = () => {
               value={formData.username}
               onChange={handleChange}
               className="form-control"
-
               required
             />
           </div>
@@ -75,7 +73,6 @@ const LoginForm = () => {
               value={formData.password}
               onChange={handleChange}
               className="form-control password-card"
-
               required
             />
             <FontAwesomeIcon
@@ -84,7 +81,7 @@ const LoginForm = () => {
               className="icon"
             />
           </div>
-         
+
           <div className="checkbox-card">
             <label>
               <input
@@ -96,32 +93,40 @@ const LoginForm = () => {
                 // onChange={handleChange}
                 required
               />
-             </label>
-             <span> Remember Me <span> <Link to= "#/forgot-password"> Forgot password</Link></span>
-           </span>
+              <p> Remember Me</p>
+            </label>
+
+            <span>
+              <Link to="/forgot-password"> Forgot password</Link>
+            </span>
           </div>
 
-          <button type="submit" className="btn form-btn">Sign Up</button>    
+          <button type="submit" className="btn form-btn">
+            Sign in
+          </button>
         </form>
 
         <div className="form-acc">
-        <p>Already have an account <Link smooth to = "/login">Sign in </Link> </p>
-
-        <span> <div></div>or Continue with <div></div></span> 
+                   <span>
+            <div></div>or Continue with <div></div>
+          </span>
         </div>
 
         <div className="google-outlook-btn">
-        
-        <button type="button" className="btn form-btn googlebtn"> <img src= {googleIcon} className="g-btn-img" /> Google</button>
-        <button type="button" className="btn form-btn outlookbtn"> <img src= {outlookIcon} className="o-btn-img" /> Outlook</button>
+          <button type="button" className="btn form-btn googlebtn">
+            <img src={googleIcon} className="g-btn-img" /> Google
+          </button>
+          <button type="button" className="btn form-btn outlookbtn">
+            {" "}
+            <img src={outlookIcon} className="o-btn-img" /> Outlook
+          </button>
         </div>
-
       </div>
       <div className="vectorSection">
         <img src={groupVector} alt="Illustration" />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default LoginForm;

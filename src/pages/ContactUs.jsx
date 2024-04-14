@@ -1,4 +1,3 @@
-import React from "react";
 import React, { useState } from "react";
 import ContactForm from "../Components/ContactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

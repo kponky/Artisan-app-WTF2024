@@ -45,7 +45,7 @@
   width: 681px;
   font-weight: 700;
   font-size: 48px;
-  line-height: 57.8px;
+  line-height: 55.8px;
   color: #fff;
 }
 
@@ -73,3 +73,30 @@ margin-top: 32px;
   background-size: cover;
   background-position: center;
  } */
+
+
+ @media screen and (max-width: 768px) {
+  .community-content {
+    padding-inline: 30px;
+    top: 0px;
+    width: 100%;
+  }
+
+  .community-content h3 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 37.8px;
+    color: #fff;
+  }
+
+.community-content .buttons{
+margin-top: -100px;
+display: flex;
+flex-direction: row;
+ }
+  
+  
+
+
+ }

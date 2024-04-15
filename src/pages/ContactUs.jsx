@@ -29,6 +29,7 @@ const ContactUs = () => {
           {/* contact form */}
 
           <ContactForm />
+      
           <div className="contact-address">
             <h6>Contact Information</h6>
             <div className="contact-icon">

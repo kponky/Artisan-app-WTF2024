@@ -8,7 +8,7 @@ const ShowcaseSales = () => {
   return (
     <div className="disc-container">
       <div className="disc-heading">
-        <h6>Discounted Materials</h6>
+        <h6>Showcasing and Sales </h6>
         <p>
           Artisan&apos;s Corner: Exclusive Discounts on Handcrafted Treasures!
         </p>

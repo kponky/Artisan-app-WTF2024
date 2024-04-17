@@ -1,5 +1,12 @@
 // import React from "react";
 import img1 from "/src/assets/artisan 6.jpg";
+import img2 from "/src/assets/threads.jpg";
+import img3 from "/src/assets/artisan 8.jpg";
+import img4 from "/src/assets/artisan7.jpg";
+import img5 from "/src/assets/pencils.jpg";
+import img6 from "/src/assets/ribbons.jpg";
+import img7 from "/src/assets/artist.jpg";
+import img8 from "/src/assets/pencils.jpg";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "/src/styles/discountedMat.css";
@@ -40,7 +47,7 @@ const DiscountedMat = () => {
           <button className="btn"> Add to Cart</button>
         </div>
         <div className="card-items">
-          <img src={img1} alt="" className="card-img" />
+          <img src={img2} alt="" className="card-img" />
           <div className="item1">
             <p>Item Name</p>
             <span>
@@ -63,7 +70,7 @@ const DiscountedMat = () => {
           <button className="btn "> Add to Cart</button>
         </div>
         <div className="card-items">
-          <img src={img1} alt="" className="card-img" />
+          <img src={img3} alt="" className="card-img" />
           <div className="item1">
             <p>Item Name</p>
             <span>
@@ -87,7 +94,7 @@ const DiscountedMat = () => {
           <button className="btn"> Add to Cart</button>
         </div>
         <div className="card-items">
-          <img src={img1} alt="" className="card-img" />
+          <img src={img4} alt="" className="card-img" />
           <div className="item1">
             <p>Item Name</p>
             <span>
@@ -111,7 +118,7 @@ const DiscountedMat = () => {
           <button className="btn"> Add to Cart</button>
         </div>
         <div className="card-items">
-          <img src={img1} alt="" className="card-img" />
+          <img src={img5} alt="" className="card-img" />
           <div className="item1">
             <p>Item Name</p>
             <span>
@@ -135,7 +142,7 @@ const DiscountedMat = () => {
           <button className="btn"> Add to Cart</button>
         </div>
         <div className="card-items">
-          <img src={img1} alt="" className="card-img" />
+          <img src={img6} alt="" className="card-img" />
           <div className="item1">
             <p>Item Name</p>
             <span>
@@ -159,7 +166,7 @@ const DiscountedMat = () => {
           <button className="btn"> Add to Cart</button>
         </div>
         <div className="card-items">
-          <img src={img1} alt="" className="card-img" />
+          <img src={img7} alt="" className="card-img" />
           <div className="item1">
             <p>Item Name</p>
             <span>
@@ -183,7 +190,7 @@ const DiscountedMat = () => {
           <button className="btn"> Add to Cart</button>
         </div>
         <div className="card-items">
-          <img src={img1} alt="" className="card-img" />
+          <img src={img8} alt="" className="card-img" />
           <div className="item1">
             <p>Item Name</p>
             <span>

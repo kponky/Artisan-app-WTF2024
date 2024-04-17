@@ -6,14 +6,15 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import React, { useState, useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import googleIcon from "../assets/Google.png";
 import groupVector from "../assets/Group.png";
 import logo from "../assets/Logo.png";
 import outlookIcon from "../assets/Outlook.png";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 import "../styles/form.css";
+import { getDocs, addDoc, collection, where, query } from "firebase/firestore";
 
 const LoginForm = () => {
   const [input, setInput] = useState({
@@ -24,6 +25,8 @@ const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const dref = collection(db, "auth");
 
   const provider = {
     google: new GoogleAuthProvider(),
@@ -65,15 +68,23 @@ const LoginForm = () => {
 
     try {
       setLoading(true);
-      const res = await signInWithEmailAndPassword(
-        auth,
-        input.email,
-        input.password
-      );
+      // const res = await signInWithEmailAndPassword(
+      //   auth,
+      //   input.email,
+      //   input.password
+      // );
+      const emailMatch = query(dref, where("email", "==", input.email));
+      const passwordMatch = query(dref, where("password", "==", input.password));
+      const emailSnapshot = await getDocs(emailMatch);
+      const passwordSnapshot = await getDocs(passwordMatch);
+      const emailMatchArray = emailSnapshot.docs.map((doc) => doc.data());
+      const passwordArray = passwordSnapshot.docs.map((doc) => doc.data());
 
-      if (res) {
+      if (emailMatchArray.length > 0 && passwordArray.length > 0) {
         alert("Login successful");
-        navigate("/dashboard");
+        // navigate("/dashboard");
+      } else {
+        alert("Incorrect email or password");
       }
     } catch (error) {
       alert(error);

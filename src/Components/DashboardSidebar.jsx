@@ -2,14 +2,19 @@
 import { Link, useLocation } from "react-router-dom";
 import { sideNavMenu } from "../data/sidebarNavlist";
 import "../styles/dashboard-sidebar.css";
-import logo from '../assets/Logo.png'
+import logo from "../assets/Logo.png";
+import { auth } from "../firebase";
 
 const DashboardSidebar = () => {
-  const {pathname, hash} = useLocation();
+  const { pathname, hash } = useLocation();
+
+  const handleLogout = () => {
+    auth.signOut();
+  };
   return (
     <div className="dashboard-sidebar">
       <div className="side-top">
-      <img src={logo} alt="artisan logo" className="sidebar-logo"/>
+        <img src={logo} alt="artisan logo" className="sidebar-logo" />
       </div>
       <h5>MENU</h5>
       <ul>
@@ -17,7 +22,12 @@ const DashboardSidebar = () => {
           const isActive = pathname === to || (hash && hash.includes(to));
           return (
             <li key={i}>
-              <Link to={to} className= {`sidebar-items ${isActive ? 'active' : ""}`}>{label}</Link>
+              <Link
+                to={to}
+                className={`sidebar-items ${isActive ? "active" : ""}`}
+              >
+                {label}
+              </Link>
             </li>
           );
         })}
@@ -29,7 +39,7 @@ const DashboardSidebar = () => {
           <Link to="/dashboard/settings">Settings</Link>
         </li>
         <li>
-          <button>Logout</button>
+          <button onClick={() => handleLogout}>Logout</button>
         </li>
       </ul>
     </div>

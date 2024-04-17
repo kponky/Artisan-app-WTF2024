@@ -8,7 +8,8 @@ import googleIcon from "../assets/Google.png";
 import outlookIcon from "../assets/Outlook.png";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
+import { db } from "../firebase";
+import { getDocs, addDoc, collection, where, query } from "firebase/firestore";
 
 const SignupForm = () => {
   const [input, setInput] = useState({
@@ -22,6 +23,8 @@ const SignupForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const dref = collection(db, "auth");
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -76,19 +79,42 @@ const SignupForm = () => {
       return;
     }
 
+    const existingEmail = query(dref, where("email", "==", input.email));
+    const existingUsername = query(
+      dref,
+      where("username", "==", input.username)
+    );
+
     try {
       setLoading(true);
-      const res = await createUserWithEmailAndPassword(
-        auth,
-        input.email,
-        input.password
-      );
+      // const res = await createUserWithEmailAndPassword(
+      //   auth,
+      //   input.email,
+      //   input.password
+      // );
 
-      if (res) {
-        alert("Registration successful");
-        navigate("/login");
+      const emailSnapshot = await getDocs(existingEmail);
+      const usernameSnapshot = await getDocs(existingUsername);
+      const emailMatchArray = emailSnapshot.docs.map((doc) => doc.data());
+      const userMatchArray = usernameSnapshot.docs.map((doc) => doc.data());
+
+      if (emailMatchArray.length > 0) {
+        alert("Email already exists");
+      } else if (userMatchArray.length > 0) {
+        alert("username exists");
+      } else {
+        const res = await addDoc(dref, {
+          fullName: input.fullName,
+          username: input.username,
+          email: input.email,
+          password: input.password,
+        });
+
+        if (res) {
+          alert("Registration successful");
+          // navigate("/login");
+        }
       }
-
     } catch (error) {
       console.log(error);
     } finally {
@@ -227,7 +253,7 @@ const SignupForm = () => {
           </div>
 
           <button type="submit" className="btn form-btn">
-           {loading ? "Loading..." : " Sign Up"}
+            {loading ? "Loading..." : " Sign Up"}
           </button>
         </form>
 

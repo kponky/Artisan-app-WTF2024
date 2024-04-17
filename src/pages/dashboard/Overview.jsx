@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import "/src/styles/overview.css";
+
 // import "/src/styles/discountedMat.css"
 
 const Overview = () => {
   const { currentUser } = useContext(AuthContext);
 
   return (
-    <div>
-      <div>Welcome {currentUser?.displayName}</div>
+    <div className="overview-container">
+      <div className="user-creditials">Welcome {currentUser?.displayName}</div>
       <div>{currentUser?.email}</div>
-      // <div>{currentUser?.uid}</div>
       <div
         style={{
           width: "40px",

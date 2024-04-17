@@ -1,44 +1,118 @@
-import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import "../styles/form.css";
-import logo from "../assets/Logo.png";
-import groupVector from "../assets/Group.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  GoogleAuthProvider,
+  OAuthProvider,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
+import React, { useState, useMemo } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import googleIcon from "../assets/Google.png";
+import groupVector from "../assets/Group.png";
+import logo from "../assets/Logo.png";
 import outlookIcon from "../assets/Outlook.png";
-import { Link } from "react-router-dom";
+import { auth } from "../firebase";
+import "../styles/form.css";
 
 const LoginForm = () => {
-  const [formData, setFormData] = useState({
-    password: "",
+  const [input, setInput] = useState({
     email: "",
-    agreeToPrivacyPolicy: false,
+    password: "",
   });
 
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const provider = {
+    google: new GoogleAuthProvider(),
+    outlook: new OAuthProvider("microsoft.com"),
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const toggleConfirmPasswordVisibility = () => {
-    setShowConfirmPassword(!showConfirmPassword);
-  };
-
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const newValue = type === "checkbox" ? checked : value;
-    setFormData({
-      ...formData,
+    setInput({
+      ...input,
       [name]: newValue,
     });
   };
 
-  const handleSubmit = (e) => {
+  const validateEmail = (input) =>
+    input.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
+
+  const isEmailInvalid = useMemo(() => {
+    if (input.email === "") return false;
+
+    return validateEmail(input.email) ? false : true;
+  }, [input.email]);
+
+  const validatePassword = (input) => input.length >= 8;
+
+  const isPasswordValid = useMemo(() => {
+    if (input.password === "") return false;
+
+    return !validatePassword(input.password);
+  }, [input.password]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log(formData);
+
+    try {
+      setLoading(true);
+      const res = await signInWithEmailAndPassword(
+        auth,
+        input.email,
+        input.password
+      );
+
+      if (res) {
+        alert("Login successful");
+        navigate("/dashboard");
+      }
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      setLoading(true);
+      const res = await signInWithPopup(auth, provider.google);
+      if (res) {
+        alert("Login successful");
+        navigate("/dashboard");
+      }
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleMicrosoftSignIn = async () => {
+    try {
+      setLoading(true);
+      const res = await signInWithPopup(auth, provider.outlook);
+      if (res) {
+        alert("Login successful");
+        navigate("/dashboard");
+      }
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -52,34 +126,52 @@ const LoginForm = () => {
         <form onSubmit={handleSubmit} className="form-card">
           <div className="form-group">
             <label htmlFor="Email">Enter Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Evelynnmett@gmail.com"
-              value={formData.username}
-              onChange={handleChange}
-              className="form-control"
-              required
-            />
+            <div style={{ height: "50px", position: "relative" }}>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Evelynnmett@gmail.com"
+                value={input.email}
+                onChange={handleChange}
+                className={`form-control ${isEmailInvalid && "error"} ${
+                  !isEmailInvalid && "success"
+                }`}
+                required
+              />
+            </div>
+            {isEmailInvalid && (
+              <span className="error-msg">
+                please enter a valid email address
+              </span>
+            )}
           </div>
           <div className="form-group password">
             <label htmlFor="password">Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              id="password"
-              name="password"
-              placeholder="atleast8characters"
-              value={formData.password}
-              onChange={handleChange}
-              className="form-control password-card"
-              required
-            />
-            <FontAwesomeIcon
-              icon={showPassword ? faEyeSlash : faEye}
-              onClick={togglePasswordVisibility}
-              className="icon"
-            />
+            <div style={{ height: "50px", position: "relative" }}>
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                placeholder="atleast8characters"
+                value={input.password}
+                onChange={handleChange}
+                className={`form-control ${isPasswordValid && "error"} ${
+                  !isPasswordValid && "success"
+                }`}
+                required
+              />
+              <FontAwesomeIcon
+                icon={showPassword ? faEyeSlash : faEye}
+                onClick={togglePasswordVisibility}
+                className="icon"
+              />
+            </div>
+            {isPasswordValid && (
+              <span className="error-msg">
+                passwords should be not less than 8 characters
+              </span>
+            )}
           </div>
 
           <div className="checkbox-card">
@@ -91,7 +183,6 @@ const LoginForm = () => {
                 className="checked"
                 // checked={formData.agreeToPrivacyPolicy}
                 // onChange={handleChange}
-                required
               />
               <p> Remember Me</p>
             </label>
@@ -102,18 +193,22 @@ const LoginForm = () => {
           </div>
 
           <button type="submit" className="btn form-btn">
-            Sign in
+            {loading ? "Loading..." : "Sign in"}
           </button>
         </form>
 
         <div className="form-acc">
-                   <span>
+          <span>
             <div></div>or Continue with <div></div>
           </span>
         </div>
 
         <div className="google-outlook-btn">
-          <button type="button" className="btn form-btn googlebtn">
+          <button
+            type="button"
+            className="btn form-btn googlebtn"
+            onClick={handleGoogleSignIn}
+          >
             <img src={googleIcon} className="g-btn-img" /> Google
           </button>
           <button type="button" className="btn form-btn outlookbtn">

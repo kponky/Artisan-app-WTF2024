@@ -1,26 +1,27 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import "../styles/form.css";
 import logo from "../assets/Logo.png";
 import groupVector from "../assets/Group.png";
-import googleIcon from '../assets/Google.png'
-import outlookIcon from  '../assets/Outlook.png'
-import { Link } from "react-router-dom";
-// import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import googleIcon from "../assets/Google.png";
+import outlookIcon from "../assets/Outlook.png";
+import { Link, useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const SignupForm = () => {
-  const [formData, setFormData] = useState({
+  const [input, setInput] = useState({
     fullName: "",
     username: "",
     password: "",
     email: "",
     confirmPassword: "",
-    agreeToPrivacyPolicy: false,
   });
-
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -33,16 +34,66 @@ const SignupForm = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const newValue = type === "checkbox" ? checked : value;
-    setFormData({
-      ...formData,
+    setInput({
+      ...input,
       [name]: newValue,
     });
   };
 
-  const handleSubmit = (e) => {
+  const validateEmail = (input) =>
+    input.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
+
+  const isEmailInvalid = useMemo(() => {
+    if (input.email === "") return false;
+
+    return validateEmail(input.email) ? false : true;
+  }, [input.email]);
+
+  const validatePassword = (input) => input.length >= 8;
+
+  const isPasswordValid = useMemo(() => {
+    if (input.password === "") return false;
+
+    return !validatePassword(input.password);
+  }, [input.password]);
+
+  const isPasswordMatch = useMemo(() => {
+    if (input.confirmPassword === "") return false;
+
+    return input.password !== input.confirmPassword ? true : false;
+  }, [input.confirmPassword]);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add form submission logic here
-    console.log(formData);
+
+    // if (!input.fullName || !input.email || !input.username || !input.password) {
+    //   alert("all fields are required");
+    //   return;
+    // }
+
+    if (input.password !== input.confirmPassword) {
+      alert("passwords do not match");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const res = await createUserWithEmailAndPassword(
+        auth,
+        input.email,
+        input.password
+      );
+
+      if (res) {
+        alert("Registration successful");
+        navigate("/login");
+      }
+
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -56,81 +107,105 @@ const SignupForm = () => {
         <form onSubmit={handleSubmit} className="form-card">
           <div className="form-group">
             <label htmlFor="fullName">Enter Full Name</label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              placeholder="Evelyn Matt"
-              value={formData.fullName}
-              onChange={handleChange}
-              className="form-control"
-              required
-            />
+            <div style={{ height: "50px", position: "relative" }}>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Evelyn Matt"
+                value={input.fullName}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
           </div>
           <div className="form-group">
-            <label htmlFor="fullName">Enter Full Name</label>
-            <input
-              type="text"
-              id="fullName"
-              name="fullName"
-              placeholder="Evelyn Matt"
-              value={formData.fullName}
-              onChange={handleChange}
-              className="form-control"
-
-              required
-            />
+            <label htmlFor="username">Enter Username</label>
+            <div style={{ height: "50px", position: "relative" }}>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Evelynna"
+                value={input.username}
+                onChange={handleChange}
+                className="form-control"
+                required
+              />
+            </div>
           </div>
           <div className="form-group">
             <label htmlFor="Email">Enter Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Evelynnmett@gmail.com"
-              value={formData.username}
-              onChange={handleChange}
-              className="form-control"
-
-              required
-            />
+            <div style={{ height: "50px", position: "relative" }}>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Evelynnmett@gmail.com"
+                value={input.email}
+                onChange={handleChange}
+                className={`form-control ${isEmailInvalid && "error"} ${
+                  !isEmailInvalid && "success"
+                }`}
+                required
+              />
+            </div>
+            {isEmailInvalid && (
+              <span className="error-msg">
+                please enter a valid email address
+              </span>
+            )}
           </div>
           <div className="form-group password">
             <label htmlFor="password">Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              id="password"
-              name="password"
-              placeholder="atleast8characters"
-              value={formData.password}
-              onChange={handleChange}
-              className="form-control password-card"
-
-              required
-            />
-            <FontAwesomeIcon
-              icon={showPassword ? faEyeSlash : faEye}
-              onClick={togglePasswordVisibility}
-              className="icon"
-            />
+            <div style={{ height: "50px", position: "relative" }}>
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                placeholder="atleast8characters"
+                value={input.password}
+                onChange={handleChange}
+                className={`form-control ${isPasswordValid && "error"} ${
+                  !isPasswordValid && "success"
+                }`}
+                required
+              />
+              <FontAwesomeIcon
+                icon={showPassword ? faEyeSlash : faEye}
+                onClick={togglePasswordVisibility}
+                className="icon"
+              />
+            </div>
+            {isPasswordValid && (
+              <span className="error-msg">
+                passwords should be not less than 8 characters
+              </span>
+            )}
           </div>
-          <div className="form-group password" >
+          <div className="form-group password">
             <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
-              type={showConfirmPassword ? "text" : "password"}
-              id="confirmPassword"
-              name="confirmPassword"
-              placeholder="atleast8characters"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="form-control password-card"
-              required
-            />
-            <FontAwesomeIcon
-              icon={showConfirmPassword ? faEyeSlash : faEye}
-              onClick={toggleConfirmPasswordVisibility}
-              className="icon"
-            />
+            <div style={{ height: "50px", position: "relative" }}>
+              <input
+                type={showConfirmPassword ? "text" : "password"}
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="atleast8characters"
+                value={input.confirmPassword}
+                onChange={handleChange}
+                className="form-control password-card"
+                required
+              />
+              <FontAwesomeIcon
+                icon={showConfirmPassword ? faEyeSlash : faEye}
+                onClick={toggleConfirmPasswordVisibility}
+                className="icon"
+              />
+            </div>
+            {isPasswordMatch && (
+              <span className="error-msg">passwords do not match </span>
+            )}
           </div>
 
           <div className="checkbox-card">
@@ -144,28 +219,41 @@ const SignupForm = () => {
                 // onChange={handleChange}
                 required
               />
-             </label>
-             <span>
-             By continuing, you acknowledge that you have read, understood
-             and consent to the Privacy Policy of Artcorner
-           </span>
+            </label>
+            <span>
+              By continuing, you acknowledge that you have read, understood and
+              consent to the Privacy Policy of Artcorner
+            </span>
           </div>
 
-          <button type="submit" className="btn form-btn">Sign Up</button>    
+          <button type="submit" className="btn form-btn">
+           {loading ? "Loading..." : " Sign Up"}
+          </button>
         </form>
 
         <div className="form-acc">
-        <p>Already have an account <Link smooth to = "/login">Sign in </Link> </p>
+          <p>
+            Already have an account{" "}
+            <Link smooth to="/login">
+              Sign in{" "}
+            </Link>{" "}
+          </p>
 
-        <span> <div></div>or Continue with <div></div></span> 
+          <span>
+            {" "}
+            <div></div>or Continue with <div></div>
+          </span>
         </div>
 
         <div className="google-outlook-btn">
-        
-        <button type="button" className="btn form-btn googlebtn"> <img src= {googleIcon} className="g-btn-img" /> Google</button>
-        <button type="button" className="btn form-btn outlookbtn"> <img src= {outlookIcon} className="o-btn-img" /> Outlook</button>
+          <button type="button" className="btn form-btn googlebtn">
+            <img src={googleIcon} className="g-btn-img" /> Google
+          </button>
+          <button type="button" className="btn form-btn outlookbtn">
+            {" "}
+            <img src={outlookIcon} className="o-btn-img" /> Outlook
+          </button>
         </div>
-
       </div>
       <div className="vectorSection">
         <img src={groupVector} alt="Illustration" />

@@ -1,5 +1,7 @@
 import React from "react";
 import emailJs from 'emailjs-com'
+import { HashLink as Link } from "react-router-hash-link";
+import { config } from "../utils/config";
 
 
 
@@ -13,7 +15,7 @@ const ContactForm = () => {
       message: e.target.message.value
     };
 
-    emailJs.send('service_7ezgial', 'template_ul3et4s', formData, 'c5IQtB_nojaZE5V4s')
+    emailJs.send(config.SERVICE_ID, config.TEMPLATE_ID, formData, config.PUBLIC_KEY)
 .then((response) =>{
  alert('Email sent succesfully:', response);
   e.target.reset();
@@ -65,7 +67,12 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
+
+      <Link to= '/sidebar'>dashobord</Link>
+
+     
     </div>
+    
   );
 };
 

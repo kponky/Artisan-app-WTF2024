@@ -1,0 +1,23 @@
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #F9F9F9;
+}
+
+.dashboard .sidebar-container {
+  width: 280px;
+  height: 100vh;
+}
+
+.dashboard .inner-wrapper {
+  width: calc(100% - 280px);
+  min-height: 100vh;
+}
+
+.dashboard .inner-wrapper .main-content {
+  width: 100%;
+  overflow-y: auto;
+  padding-inline: 2rem;
+  padding-block: 3rem;
+}

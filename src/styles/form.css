@@ -63,12 +63,13 @@
 
 
 .form-card .form-group .form-control {
-  padding: 16px;
-  box-sizing: border-box;
+  height: 100%;
   width: 100%;
+  box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid #D9D9D9;
   resize: none;
+  padding-inline: 1rem;
   /* outline: none; */
 }
 
@@ -77,21 +78,28 @@
   display: flex;
 }
 
+.form-group .error-msg {
+  font-size: 14px;
+  color: red;
+}
+
+.password .icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-group .error:focus {
+  border: 1px solid red !important;
+}
+
 .form-card .form-group .form-control:focus {
   outline: 0;
   border: 1px solid var(--buttonColorLight);
 }
 
-
-.form-group .icon {
-  position: absolute;
-  bottom: 19px;
-  right: 8px;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  color: #8a8a8d;
-}
 
 .signup-form-container .checkbox-card,
 .login-form-container .checkbox-card {
@@ -271,8 +279,8 @@ vertical-align: middle;
   }
 
   .signupform-wrapper .vectorSection,
-.loginform-wrapper .vectorSection {
-  background-color: var(--backgroundColor);
-}
+  .loginform-wrapper .vectorSection {
+    background-color: var(--backgroundColor);
+  }
 
 }

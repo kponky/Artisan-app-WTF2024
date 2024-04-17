@@ -8,9 +8,9 @@ import { AuthContext } from "../contexts/AuthContext";
 const DashboardLayout = () => {
   const { userLoggedIn } = useContext(AuthContext);
 
-  if (!userLoggedIn) {
-    return <Navigate to={"/login"} replace={true} />;
-  }
+  // if (!userLoggedIn) {
+  //   return <Navigate to={"/login"} replace={true} />;
+  // }
 
   return (
     <div className="dashboard">

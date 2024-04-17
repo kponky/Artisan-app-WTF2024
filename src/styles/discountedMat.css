@@ -1,5 +1,5 @@
 .disc-container {
-  height: 100vh;
+  width: 100%;
 }
 
 .disc-container .disc-heading {
@@ -32,16 +32,18 @@
 
 }
 
-
-.discounted-card .card-items .card-img {
-  width: 230px;
-  height: 200px;
-  object-fit: cover;
+.discounted-card .card-items {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding-inline: 11px;
-  /* width: 264px;
-height: 262px; */
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  overflow: hidden;
+}
+
+.discounted-card .card-items .card-img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 11px;
 }
 
 .discounted-card .card-items .card-img img {
@@ -50,48 +52,86 @@ height: 262px; */
   object-fit: cover;
 }
 
-
-.discounted-card .card-items {
-  background-color: #fff;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding-block: 20px;
-}
-
 .discounted-card .card-items .item1 {
   display: flex;
   justify-content: space-between;
   padding-inline: 12px;
-
-  
-
+  margin-bottom: 10px;
 }
-.discounted-card .card-items .item2{
+
+.discounted-card .card-items .item1 p{
+  color:#101828;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+ .p-item{
+  color:#101828;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+
+.discounted-card .card-items .item2 {
+  padding-inline: 12px;
   display: flex;
   justify-content: space-between;
-  margin-block: 10px;
-
-
+  margin-bottom: 10px;
 }
 
-.discounted-card .card-items .item2  .icon{
+.discounted-card .card-items .item2 .stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.discounted-card .card-items .item2 .stars span{
+  color: #1D2939;
+  font-size: 14px;
+font-weight: 500;
+}
+.discounted-card .card-items .item2 .icon {
   color: orangered;
   font-size: 13px;
+  padding-inline: 0;
+
 }
 
-
-.discounted-card .card-items  .btn{
-  width: 126px;
+.discounted-card .card-items .btn-wrap{
+padding-inline: 0.5rem;
+}
+.discounted-card .card-items .btn {
+  width: 100%;
   height: 40px;
   font-size: 12px;
   text-align: center;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: transparent;
+  margin-bottom: 11px;
   border: 2px solid var(--buttonColor);
   color: var(--buttonColor);
   font-weight: 700;
-  margin-inline: 13px;
+  transition: all 0.3s ease-in-out;
+}
+
+.discounted-card .card-items .btn:hover{
+  background: var(--buttonColor);
+  color: #fff;
+}
+
+
+.card-items .item2 .price p{
+  color: #8C8C8C;
+  text-decoration: line-through;
 
 }
 
+.card-items .item2 .price p span{
+  font-weight: 700;
+  font-size: 17px;
+  color: #8C8C8C;
+ 
+
+}

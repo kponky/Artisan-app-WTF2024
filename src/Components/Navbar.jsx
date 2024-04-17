@@ -36,7 +36,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="inner-navbar container">
         <div className="navbar-logo">
-          <img src={logo} />
+        <Link to= '/'>  
+        <img src={logo} />
+    </Link>
         </div>
 
         <ul className={`navbar--items ${showNav ? "show" : ""}`}>

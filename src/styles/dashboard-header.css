@@ -3,6 +3,10 @@
   height: 70px;
   background: #fff;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 30;
 }
 
 .dashboard-header .dashboard-header-inner {
@@ -36,15 +40,14 @@
   width: 100%;
   border-radius: 12px;
   border: 1px solid #8C8C8C;
-    padding-inline: 3rem;
+  padding-inline: 3rem;
 }
 
-.icon
-{
-   color: #8C8C8C;
-   font-size: 16px;
-   padding-inline: 10px;
-  
+.icon {
+  color: #8C8C8C;
+  font-size: 16px;
+  padding-inline: 10px;
+
 }
 
 .dashboard-header-inner .header-right {
@@ -54,22 +57,22 @@
   gap: 1rem;
 }
 
-.header-right button{
+.header-right button {
   background: transparent;
   border: none;
   cursor: pointer;
   position: relative;
- 
+
 }
 
-.header-right button .badge{
+.header-right button .badge {
   position: absolute;
- bottom: 10px;
+  bottom: 10px;
   background-color: rgb(43, 82, 239);
   color: white;
   border-radius: 50%;
   padding: 1px;
-  height:15px;
+  height: 15px;
   width: 13px;
   left: 20px;
   font-size: 10px;
@@ -99,14 +102,14 @@
   padding-left: .5rem;
 }
 
-.user-info .u-info-name{
-font-size: 16px;
-font-weight: 500;
-line-height: 22.4px;
+.user-info .u-info-name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
 }
 
-.user-info .u-info-email{
-font-size: 12px;
-font-weight: 400;
-line-height: 16.8px;
+.user-info .u-info-email {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
 }

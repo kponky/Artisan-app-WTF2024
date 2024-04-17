@@ -11,14 +11,14 @@ const Overview = () => {
     <div className="overview-container">
       <div className="user-creditials">Welcome {currentUser?.displayName}</div>
       <div>{currentUser?.email}</div>
-      <div
-        style={{
-          width: "40px",
-          height: "40px",
-          borderRadius: "50%",
-          overflow: "hidden",
-        }}
-      >
+      <div>{currentUser?.uid}</div>
+      <div 
+      style={{
+        width: "40px",
+        height: "40px",
+        borderRadius: "50%",
+        overflow: "hidden",
+      }}>
         <img src={currentUser?.photoURL} alt="profile photo" />
       </div>
     </div>

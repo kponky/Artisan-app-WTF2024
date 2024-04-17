@@ -82,7 +82,7 @@ const LoginForm = () => {
 
       if (emailMatchArray.length > 0 && passwordArray.length > 0) {
         alert("Login successful");
-        // navigate("/dashboard");
+        navigate("/dashboard");
       } else {
         alert("Incorrect email or password");
       }

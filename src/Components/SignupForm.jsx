@@ -112,7 +112,7 @@ const SignupForm = () => {
 
         if (res) {
           alert("Registration successful");
-          // navigate("/login");
+          navigate("/login");
         }
       }
     } catch (error) {

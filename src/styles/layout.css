@@ -17,7 +17,7 @@
 
 .dashboard .inner-wrapper .main-content {
   width: 100%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   padding-inline: 2rem;
-  padding-block: 3rem;
+  padding-block: 2rem;
 }

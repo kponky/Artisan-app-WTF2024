@@ -1,0 +1,97 @@
+.disc-container {
+  height: 100vh;
+}
+
+.disc-container .disc-heading {
+  padding-block: 1.5rem;
+
+}
+
+.disc-container .disc-heading h6 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-block: 9px;
+  color: #232323;
+}
+
+.disc-container .disc-heading p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: #9A9A9A;
+}
+
+
+.discounted-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+
+}
+
+
+.discounted-card .card-items .card-img {
+  width: 230px;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-inline: 11px;
+  /* width: 264px;
+height: 262px; */
+}
+
+.discounted-card .card-items .card-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.discounted-card .card-items {
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding-block: 20px;
+}
+
+.discounted-card .card-items .item1 {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 12px;
+
+  
+
+}
+.discounted-card .card-items .item2{
+  display: flex;
+  justify-content: space-between;
+  margin-block: 10px;
+
+
+}
+
+.discounted-card .card-items .item2  .icon{
+  color: orangered;
+  font-size: 13px;
+}
+
+
+.discounted-card .card-items  .btn{
+  width: 126px;
+  height: 40px;
+  font-size: 12px;
+  text-align: center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  background: transparent;
+  border: 2px solid var(--buttonColor);
+  color: var(--buttonColor);
+  font-weight: 700;
+  margin-inline: 13px;
+
+}
+

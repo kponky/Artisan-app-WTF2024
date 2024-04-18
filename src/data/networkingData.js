@@ -12,7 +12,7 @@ import Img8 from "../assets/Kponky-removebg (1).png";
 export const networkdata = [
   { title: "Everlyn A.", occupation: "Fashion Designer", image: Img1 },
   { title: "Angel J", occupation: "Ceramist",image: Img2 },
-  { title: "Zoe Smith", occupation: "leather worker", image: Img3 },
+  { title: "Zoe Smith", occupation: "Leather worker", image: Img3 },
   { title: "John Doe", occupation: " Wood carver",image: Img4 },
   { title: "Dean/Korra", occupation: "Sculptor", image: Img5 },
   { title:"Zulu K.", occupation: "Embroiderer", image: Img6 },

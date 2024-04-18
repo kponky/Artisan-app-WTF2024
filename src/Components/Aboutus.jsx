@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
-import aboutUsImg from '../assets/Frame 8.png'
+// import aboutUsImg from '../assets/Frame 8.png'
+import  aboutUsImg from "../assets/bead maker 2.jpg"
 
 
 const Aboutus = () => {

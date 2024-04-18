@@ -1,7 +1,7 @@
 import React from "react";
 import {advanceData} from "../../data/advanceTraininData"
 import "/src/styles/discountedMat.css";
-import ProductCard from "../../Components/ProductCard";
+import ProductCard2 from "../../Components/ProductCard2";
 
 const AdvanceTrain = () => {
   return (
@@ -17,7 +17,7 @@ const AdvanceTrain = () => {
 
       <div className="discounted-card">
       {advanceData.map((item, i) => (
-        <ProductCard key={i} {...item} />
+        <ProductCard2 key={i} {...item} />
       ))}
     </div>
     </div>

@@ -318,6 +318,11 @@ img {
   margin-bottom: 10px;
 }
 
+.aboutImg{
+  border-radius: 25px;
+  overflow: auto;
+}
+
 /* Aboutus styling ends here  */
 
 

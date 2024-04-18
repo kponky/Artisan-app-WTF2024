@@ -3,7 +3,7 @@ import React from 'react'
 const Settings = () => {
   return (
     <div>
-      settings icon
+    settings  page comin soon .. bear with us !!!
     </div>
   )
 }

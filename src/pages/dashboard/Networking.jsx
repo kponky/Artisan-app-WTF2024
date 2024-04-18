@@ -1,4 +1,5 @@
 import ProductCard from "../../Components/ProductCard"
+import ProductCard3 from "../../Components/ProductCard3"
 import { networkdata } from "../../data/networkingData"
 
 
@@ -14,7 +15,7 @@ const Networking = () => {
 
   <div className="discounted-card">
   {networkdata.map((item, i) => (
-    <ProductCard key={i} {...item} />
+    <ProductCard3 key={i} {...item} />
   ))}
 </div>
 

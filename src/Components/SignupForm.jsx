@@ -266,7 +266,7 @@ const SignupForm = () => {
           </p>
 
           <span>
-            {" "}
+           
             <div></div>or Continue with <div></div>
           </span>
         </div>

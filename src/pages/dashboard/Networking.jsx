@@ -15,7 +15,7 @@ const Networking = () => {
 
   <div className="discounted-card">
   {networkdata.map((item, i) => (
-    <ProductCard3 key={i} {...item} />
+    <ProductCard3 key={i} item={item} pathname="networking" />
   ))}
 </div>
 

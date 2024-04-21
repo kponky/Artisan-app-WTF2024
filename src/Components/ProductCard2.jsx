@@ -1,14 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductCard2 = (props) => {
   const item = props;
   return (
     <div className="card-items">
-      <div className="card-img">
-        <img src={item.image} alt="" />
-      </div>
+      <Link to={`/dashboard/advance-training/${item.id}`}>
+        <div className="card-img">
+          <img src={item.image} alt="" />
+        </div>
+      </Link>
+
       <div className="item1">
-        <p>{item.title}</p>
+        <Link to={`/dashboard/advance-training/${item.id}`}>
+          <p>{item.title}</p>
+        </Link>
         <span>
           <span className="p-item">{item.discount}</span>
         </span>

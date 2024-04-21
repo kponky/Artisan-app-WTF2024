@@ -67,10 +67,7 @@ const ContactForm = () => {
           Submit
         </button>
       </form>
-
-      <Link to= '/sidebar'>dashobord</Link>
-
-     
+    
     </div>
     
   );

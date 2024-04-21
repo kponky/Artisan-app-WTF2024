@@ -1,16 +1,24 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { useCart } from "../contexts/CartContext";
 
 const ProductCard = (props) => {
   const item = props;
+  const { addToCart } = useCart();
+
   return (
     <div className="card-items">
-      <div className="card-img">
-        <img src={item.image} alt="" />
-      </div>
+      <Link to={`/dashboard/discounted-materials/${item.id}`}>
+        <div className="card-img">
+          <img src={item.image} alt="" />
+        </div>
+      </Link>
       <div className="item1">
-        <p>{item.title}</p>
+        <Link to={`/dashboard/discounted-materials/${item.id}`}>
+          <p>{item.title}</p>
+        </Link>
         <span>
           $ <span className="p-item">{item.discount}</span>
         </span>
@@ -32,7 +40,9 @@ const ProductCard = (props) => {
         </div>
       </div>
       <div className="btn-wrap">
-        <button className="btn"> Add to Cart</button>
+        <button className="btn" onClick={() => addToCart(item, item.id)}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );

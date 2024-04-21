@@ -54,6 +54,7 @@ a{
   display: flex;
   gap: 20px;
   margin-top: 20px;
+  color: white;
 }
 .footer-card .footer-col .footer-socials .icon:hover{
   color: #0c78ea;

@@ -6,12 +6,14 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import AdvanceTrain from "./pages/dashboard/AdvanceTrain";
-import DiscountedMat from "./pages/dashboard/DiscountedMat";
+import AdvanceTrain from "./pages/dashboard/advanced-training/AdvanceTrain";
+import DiscountedMat from "./pages/dashboard/discounted-material/DiscountedMat";
 import Networking from "./pages/dashboard/Networking";
 import Overview from "./pages/dashboard/Overview";
 import Settings from "./pages/dashboard/Settings";
 import ShowcaseSales from "./pages/dashboard/ShowcaseSales";
+import SingleNetworking from "./pages/dashboard/SingleNetworking"
+import SinglePageDiscount from "./pages/dashboard/discounted-material/SinglePage";
 
 const AppRoutes = () => {
   return (
@@ -23,11 +25,20 @@ const AppRoutes = () => {
         </Route>
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Overview />} />
-          <Route path='advance-training' element = {<AdvanceTrain/>}></Route>
-          <Route path='discounted-materials' element ={<DiscountedMat/>}></Route>
-          <Route path='networking' element ={<Networking/>}></Route>
-          <Route path='showcase-sales' element ={<ShowcaseSales/>}></Route>
-          <Route path='settings' element ={<Settings/>}></Route>
+          <Route path="advance-training" element={<AdvanceTrain />}></Route>
+          
+          <Route
+            path="discounted-materials"
+            element={<DiscountedMat />}
+          ></Route>
+          <Route
+            path="discounted-materials/:id"
+            element={<SinglePageDiscount />}
+          ></Route>
+          <Route path="networking" element={<Networking />}></Route>
+          <Route path="networking/:id" element={<SingleNetworking />}></Route>
+          <Route path="showcase-sales" element={<ShowcaseSales />}></Route>
+          <Route path="settings" element={<Settings />}></Route>
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

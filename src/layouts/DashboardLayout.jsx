@@ -2,11 +2,13 @@ import DashboardHeader from "../Components/DashboardHeader";
 import DashboardSidebar from "../Components/DashboardSidebar";
 import { Navigate, Outlet } from "react-router-dom";
 import "../styles/layout.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
+import Cart from "../Components/Cart";
 
 const DashboardLayout = () => {
   const { userLoggedIn } = useContext(AuthContext);
+  const [openCart, setOpenCart] = useState(false);
 
   // if (!userLoggedIn) {
   //   return <Navigate to={"/login"} replace={true} />;
@@ -18,7 +20,12 @@ const DashboardLayout = () => {
         <DashboardSidebar />
       </div>
       <div className="inner-wrapper">
-        <DashboardHeader />
+        <DashboardHeader openCart={openCart} setOpenCart={setOpenCart} />
+        {openCart && (
+          <div className="cart-modal">
+            <Cart />
+          </div>
+        )}
         <main className="main-content">
           <Outlet />
         </main>

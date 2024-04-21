@@ -1,7 +1,7 @@
 import React from "react";
-import {advanceData} from "../../data/advanceTraininData"
+import {advanceData} from "../../../data/advanceTraininData"
 import "/src/styles/discountedMat.css";
-import ProductCard2 from "../../Components/ProductCard2";
+import ProductCard2 from "../../../Components/ProductCard2";
 
 const AdvanceTrain = () => {
   return (

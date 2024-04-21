@@ -21,6 +21,15 @@
   width: calc(100% - 280px);
   min-height: 100vh;
   margin-left: 280px;
+  position: relative;
+}
+.dashboard .inner-wrapper .cart-modal {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 70px;
+  height: calc(100vh - 70px);
+  z-index: 30;
 }
 
 .dashboard .inner-wrapper .main-content {

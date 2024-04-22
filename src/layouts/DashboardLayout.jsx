@@ -23,7 +23,7 @@ const DashboardLayout = () => {
         <DashboardHeader openCart={openCart} setOpenCart={setOpenCart} />
         {openCart && (
           <div className="cart-modal">
-            <Cart />
+            <Cart setOpenCart={setOpenCart} />
           </div>
         )}
         <main className="main-content">

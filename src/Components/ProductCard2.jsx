@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Modal from "./Modal";
+
+
 
 const ProductCard2 = (props) => {
   const item = props;
+
+  const [openModal, setOpenModal] = useState(false)
+  const handleOpenModal = ()=> setOpenModal(true)
   return (
     <div className="card-items">
       <Link to={`/dashboard/advance-training/${item.id}`}>
@@ -27,10 +33,12 @@ const ProductCard2 = (props) => {
         </div>
       </div>
       <div className="btn-wrap">
-        <button className="btn"> Register</button>
+      <button className="btn" onClick={handleOpenModal}> Register</button>
+      <Modal  open = {openModal} onClose={()=> setOpenModal(false)}/>
       </div>
     </div>
   );
 };
 
 export default ProductCard2;
+ 

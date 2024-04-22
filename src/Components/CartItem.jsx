@@ -2,6 +2,7 @@ import { faMinus, faPlus, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useCart } from "../contexts/CartContext";
+import { formatCurrency } from "../utils/helpers";
 
 const CartItem = ({ item }) => {
   const { increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
@@ -19,21 +20,21 @@ const CartItem = ({ item }) => {
         <img src={item.image} alt={item.title} />
       </div>
       <div className="card-item_detail">
-        <div>
+        <div className="card__item1">
           <p>{item.title}</p>
-          <p>{item.discount}</p>
+          <p>{formatCurrency(item.discount, "USD")}</p>
         </div>
-        <div>
+        <div className="card__item2">
           <div className="quantity-btns">
-            <button
-              onClick={handleDecrement(item.id)}
+            <button className="quantity-btn"
+              onClick={() => handleDecrement(item.id)}
               disabled={item.quantity < 2}
             >
-              <FontAwesomeIcon icon={faMinus} />
+              <FontAwesomeIcon icon={faMinus} className="icon"/>
             </button>
             <span>{item.quantity}</span>
-            <button onClick={handleIncrement(item.id)}>
-              <FontAwesomeIcon icon={faPlus} />
+            <button className="quantity-btn" onClick={() => handleIncrement(item.id)}>
+              <FontAwesomeIcon icon={faPlus}  className="icon"/>
             </button>
           </div>
 
@@ -41,7 +42,7 @@ const CartItem = ({ item }) => {
             className="remove-btn"
             onClick={() => removeFromCart(item.id)}
           >
-            <FontAwesomeIcon icon={faTrashAlt} />
+            <FontAwesomeIcon icon={faTrashAlt} className="icon"  />
           </button>
         </div>
       </div>

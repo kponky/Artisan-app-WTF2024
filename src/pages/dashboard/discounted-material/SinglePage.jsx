@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { discountData } from "../../../data/discountedData";
 import "./discounted.css";
+import { useCart } from "../../../contexts/CartContext";
 
 const SinglePageDiscount = () => {
+  const { addToCart } = useCart();
   const { id } = useParams();
   const item = discountData.find((data) => data.id === id);
   const [quantity, setQuantity] = useState(1);
@@ -32,7 +34,6 @@ const SinglePageDiscount = () => {
           <li>{item.title}</li>
         </ol>
       </nav>
-      
 
       <div className="single-discounted_inner">
         <div className="grid-discount">
@@ -96,15 +97,17 @@ const SinglePageDiscount = () => {
               <div>
                 <input type="radio" name="" id="" />
               </div>
-              <div  className="radio-select-text">
+              <div className="radio-select-text">
                 <p>Make Peer Purchase</p>
                 <span>Collectively place an order with multiple artisans</span>
               </div>
             </div>
 
             <div className="buttons">
-              <button className="btn ">Buy Now</button>
-              <button className="btn ">Add to Cart</button>
+              <button className="btn">Buy Now</button>
+              <button className="btn" onClick={() => addToCart(item, item.id)}>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>

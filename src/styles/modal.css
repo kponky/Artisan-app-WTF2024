@@ -1,0 +1,136 @@
+.modal-overlay .overlay {
+  background: rgba(23, 22, 22, 0.095);
+}
+
+.modal-close_icon{
+  position: relative;
+
+}
+
+.modalform-container .modal-close_icon button{
+  position: absolute;
+  right: 0;
+  background: transparent;
+  border: none;
+  display: none;
+ }
+
+ .modalform-container .modal-close_icon button .icon{
+  color: var(--buttonColor);
+  font-size: 17px;
+ }
+
+.modalform-container {
+  background-color: #fff;
+  width: 695px;
+  height: 374px;
+  /* top: 211px;
+left: 373px; */
+  gap: 0px;
+  border-radius: 8px;
+  opacity: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  margin:auto;
+}
+
+.modalform-container .modal-text h6 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  padding-block: 8px;
+  color: #232323;
+}
+
+.modalform-container .modal-text p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: #9A9A9A;
+  padding-bottom: 10px;
+}
+
+.modalform-container .form-input .form-card .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 16px;
+
+}
+
+.modalform-container .form-input .form-card .form-group label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  padding-block: 3px;
+}
+
+.modalform-container .form-input .form-card .form-group input {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  resize: none;
+  padding-inline: 1rem;
+  padding: 10px;
+
+}
+
+.modalform-container .form-input .form-card .form-group ::placeholder {
+  color: #9A9A9A;
+  font-size: 15px;
+
+}
+
+.modalform-container .form-input .form-card .form-group input:focus {
+  outline: 0;
+  border: 1px solid var(--buttonColorLight);
+}
+
+.modalform-container .form-input .form-card .toggle-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.modalform-container .form-input .form-card .toggle-card .togle-btn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.modalform-container .form-input .form-card .toggle-card .togle-btn p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.8px;
+  color: #262626;
+}
+
+.modalform-container .form-input .form-card .toggle-card .togle-btn .icon {
+  color: #9A9A9A;
+}
+
+.modalform-container .form-input .form-card .toggle-card .toggle-btn2 .btn{
+  background: var(--buttonColor);
+  color: #fff;
+}
+.modalform-container .form-input .form-card .toggle-card .toggle-btn2 .btn:hover{
+  background:  #fff;
+  color: var(--buttonColor);
+}
+
+.modal-overlay .modal-right{
+  position: relative;
+}
+
+.modal-overlay .overlay  .modal-right .close-btn{
+  position: absolute;
+  top: 20px;
+  right: 180px;
+  color: var(--buttonColor);
+  font-size: 17px
+  /* right: 0px; */
+}

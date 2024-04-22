@@ -21,11 +21,11 @@ const CartProvider = ({ children }) => {
 
   // calculate the total price of an item per quantity
   useEffect(() => {
-    const total = cart.reduce((accumulator, currentItem) => {
+    const totalPrice = cart.reduce((accumulator, currentItem) => {
       return accumulator + currentItem.price * currentItem.quantity;
     }, 0);
-    setTotal(total);
-  });
+    setTotal(totalPrice);
+  },[cart]); // include cart as a dependency
 
   // update the item count
   useEffect(() => {

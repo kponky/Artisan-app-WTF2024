@@ -216,9 +216,7 @@ vertical-align: middle;
   height: 60px;
 }
 
-.google-outlook-btn .googlebtn:hover {
-  border: 2px solid var(--buttonColor);
-}
+ 
 
 .signup-form-container .google-outlook-btn .outlookbtn,
 .login-form-container .google-outlook-btn .outlookbtn {

@@ -12,8 +12,9 @@ import Networking from "./pages/dashboard/Networking";
 import Overview from "./pages/dashboard/Overview";
 import Settings from "./pages/dashboard/Settings";
 import ShowcaseSales from "./pages/dashboard/ShowcaseSales";
-import SingleNetworking from "./pages/dashboard/SingleNetworking"
+import SingleNetworking from "./pages/dashboard/SingleNetworking";
 import SinglePageDiscount from "./pages/dashboard/discounted-material/SinglePage";
+import Checkout from "./pages/dashboard/discounted-material/Checkout";
 
 const AppRoutes = () => {
   return (
@@ -26,7 +27,7 @@ const AppRoutes = () => {
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Overview />} />
           <Route path="advance-training" element={<AdvanceTrain />}></Route>
-          
+
           <Route
             path="discounted-materials"
             element={<DiscountedMat />}
@@ -34,6 +35,10 @@ const AppRoutes = () => {
           <Route
             path="discounted-materials/:id"
             element={<SinglePageDiscount />}
+          ></Route>
+          <Route
+            path="discounted-materials/:id/checkout"
+            element={<Checkout/>}
           ></Route>
           <Route path="networking" element={<Networking />}></Route>
           <Route path="networking/:id" element={<SingleNetworking />}></Route>

@@ -36,14 +36,10 @@ const AppRoutes = () => {
             path="discounted-materials/:id"
             element={<SinglePageDiscount />}
           ></Route>
-
-          <Route path="checkout" element={<Checkout/>}></Route>
-
-          
-          {/*<Route
-            path="discounted-materials/:id/checkout"
-            element={<Checkout/>}
-  ></Route>*/}
+          <Route
+            path="checkout"
+            element={<Checkout />}
+          ></Route>
           <Route path="networking" element={<Networking />}></Route>
           <Route path="networking/:id" element={<SingleNetworking />}></Route>
           <Route path="showcase-sales" element={<ShowcaseSales />}></Route>

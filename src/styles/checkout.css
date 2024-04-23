@@ -1,0 +1,5 @@
+.checkout-container  .left{ 
+  display: grid;
+  grid-template-columns: 70% 30%; /* Define column widths */
+  gap: 10px; 
+}

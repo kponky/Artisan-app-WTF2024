@@ -11,8 +11,6 @@ import Img8 from "../assets/crochets robes.jpg";
 // import Img11 from "../assets/crochets robes.jpg";
 // import Img12 from "../assets/crochets robes.jpg";
 
-
-
 export const showdata = [
   { title: "Wooven Scarf", price: "20", discount: "16.50", image: Img1 },
   { title: "African Fabrics", price: "20", discount: "16.50", image: Img2 },
@@ -21,7 +19,7 @@ export const showdata = [
   { title: "Embroidery...", price: "20", discount: "16.50", image: Img5 },
   { title: "Ceramic Pot", price: "20", discount: "16.50", image: Img6 },
   { title: "Handcrafted Bag", price: "20", discount: "16.50", image: Img7 },
-  { title: "Tye/Dye fabrics", price: "20", discount: "16.50", image: Img8},
+  { title: "Tye/Dye fabrics", price: "20", discount: "16.50", image: Img8 },
   // { title: "Item Name 9", price: "20", discount: "16.50", image: Img9},
   // { title: "Item Name 10", price: "20", discount: "16.50", image: Img10},
   // { title: "Item Name 11", price: "20", discount: "16.50", image: Img11},

@@ -1,22 +1,23 @@
 import React from "react";
-import checked from "../../assets/Frame 1000009966.png";
+import checkimg from '../assets/Frame 1000009966.png'
 
 const PaymentConfirmation = () => {
   return (
     <div className="confirmation-card">
       <div className="tick">
-        <img src={checked} alt="check" />
+        <img src={checkimg} alt="check" />
       </div>
 
       <div>
         <h3>Payment Succesfull</h3>
-        <p>Thank you for buying with us today <br /> 
-        We value You!
-        </p> 
+        <p>
+          Thank you for buying with us today <br />
+          We value You!
+        </p>
         <div className="confirmation-btn">
-        <Link to = "/">
-        <button>Return Home</button>
-        </Link>
+          <Link to="/">
+            <button>Return Home</button>
+          </Link>
         </div>
       </div>
     </div>

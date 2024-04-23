@@ -5,15 +5,17 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import CartItem from "./CartItem";
 import "../styles/cart.css";
 import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Cart = ({ setOpenCart, id }) => {
   const { cart, total, clearCart } = useCart();
   const navigate = useNavigate();
 
   const handleCheckout = () => {
-    navigate(`/discounted-materials/${id}/checkout`);
+    setOpenCart(false);
+    navigate(`/dashboard/checkout`);
   };
+
   return (
     <div className="cart">
       <div className="cart-overlay">
@@ -39,6 +41,7 @@ const Cart = ({ setOpenCart, id }) => {
             ) : (
               cart.map((item, i) => <CartItem key={i} item={item} />)
             )}
+            ;
           </div>
 
           <div className="cart-bottom">
@@ -47,13 +50,12 @@ const Cart = ({ setOpenCart, id }) => {
               <p>${total}.00</p>
             </div>
             <div className="line"></div>
-            <Link to= '/checkout'>
-                        <div className="cart-checkout">
-                <button className="btn" >
-                  Checkout
-                </button>
+
+            <div className="cart-checkout">
+              <button className="btn" onClick={handleCheckout}>
+                Checkout
+              </button>
             </div>
-            </Link>
           </div>
         </div>
       </div>
@@ -62,4 +64,3 @@ const Cart = ({ setOpenCart, id }) => {
 };
 
 export default Cart;
-// <Link to=""></Link>;

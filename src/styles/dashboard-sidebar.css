@@ -94,3 +94,20 @@
   background-color: var(--buttonColor);
   color: white;
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .dashboard-header {
+     flex-direction: column;
+   }
+ 
+  .dashboard-sidebar {
+     width: 100%;
+     position: relative;
+   }
+ 
+  .dashboard-sidebar-item {
+     width: 100%;
+   }
+ }

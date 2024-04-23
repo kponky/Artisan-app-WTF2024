@@ -1,10 +1,18 @@
 import { faCalendar } from "@fortawesome/free-solid-svg-icons/faCalendar";
 import { faLock } from "@fortawesome/free-solid-svg-icons/faLock";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
+import { useCart } from "../contexts/CartContext";
+import PaymentConfirmation from "./PaymentConfirmation";
 
-const PaymementInfo = () => {
+const PaymentInfo = () => {
+  const [loading, setLoading] = useState(false);
+  const {cart} = useCart();
+
+  const handlePayment = () => {};
   return (
+    <>
+    <PaymentConfirmation />
     <div className="paymentInfo-card">
       <div className="paymentInfo-header">
         <h6>Payment Information</h6>
@@ -70,7 +78,9 @@ const PaymementInfo = () => {
           </div>
         </form>
 
-        <div className="paymentopt-bottom">
+       
+        <div className="paymentopt-bottom"> 
+
           <div className="sub">
             <div>
               <p>SubTotal</p> <span>{item.total}</span>
@@ -84,19 +94,21 @@ const PaymementInfo = () => {
           </div>
 
           <div className="total">
-          <div>
-          <p>Total</p> <span>{item.total}</span>
-        </div>
-          
+            <div>
+              <p>Total</p> <span>{item.total}</span>
+            </div>
           </div>
 
           <div className="info-btn">
-          <button className="btn">Pay $49.50</button>
+            <button className="btn" onClick={() => handlePayment}>
+              Pay $49.50
+            </button>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 };
 
-export default PaymementInfo;
+export default PaymentInfo;

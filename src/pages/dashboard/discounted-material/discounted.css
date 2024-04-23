@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.single-discounted .breadcrumbs {}
+/* .single-discounted .breadcrumbs {} */
 
 .single-discounted .breadcrumbs ol {
   list-style: none;
@@ -31,7 +31,6 @@
   background: #fff;
   padding: 1rem;
   border: 1px solid grey;
-  /* box-shadow: 1px 3px 1px blac; */
 }
 
 .single-discounted .single-discounted_inner .grid-discount {

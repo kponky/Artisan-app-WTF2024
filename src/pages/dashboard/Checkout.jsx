@@ -8,7 +8,10 @@ const Checkout = () => {
       <div className="left">
         <div className="left-top">
           <OrderSummary />
-          <PaymentInfo/>
+        </div>
+        <div>
+       <PaymentInfo/>
+
         </div>
         <div className="left-bottom">delvery information</div>
       </div>

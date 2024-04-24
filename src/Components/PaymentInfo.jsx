@@ -3,7 +3,7 @@ import { faLock } from "@fortawesome/free-solid-svg-icons/faLock";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { useCart } from "../contexts/CartContext";
-import PaymentConfirmation from "./PaymentConfirmation";
+// import PaymentConfirmation from "./PaymentConfirmation";
 
 const PaymentInfo = () => {
   const [loading, setLoading] = useState(false);
@@ -11,8 +11,8 @@ const PaymentInfo = () => {
 
   const handlePayment = () => {};
   return (
-    <>
-    <PaymentConfirmation />
+
+    // <PaymentConfirmation />
     <div className="paymentInfo-card">
       <div className="paymentInfo-header">
         <h6>Payment Information</h6>
@@ -106,8 +106,9 @@ const PaymentInfo = () => {
           </div>
         </div>
       </div>
+      <PaymentInfo/>
     </div>
-    </>
+
   );
 };
 

@@ -1,10 +1,11 @@
 import React from "react";
+import '../styles/delivery.css'
 
 const DeliveryInfo = () => {
   return (
     <div className="delivery-info-container">
       <h3>Delivery Information</h3>
-      <form>
+      <form className="form-card1">
         <div className="form-group">
           <label htmlFor="FirstName"> First Name</label>
           <div>

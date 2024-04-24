@@ -1,5 +1,16 @@
-.checkout-container  .left{ 
+.checkout-container  .left .left-top{ 
   display: grid;
   grid-template-columns: 70% 30%; /* Define column widths */
   gap: 10px; 
+}
+
+
+.checkout-container  .left .left-top .payment{
+  /* background-color: rgb(129, 132, 129); */
+  height: 100%;
+  width: 100%;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;}
+
+.checkout-container .right{
+  margin-top: 30px;
 }

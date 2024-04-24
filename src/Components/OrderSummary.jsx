@@ -10,7 +10,8 @@ const OrderSummary = () => {
       <div className="cart-card">
         <div className="cart-card-header">
           <div className="item-count">
-            <h3>Order Summary </h3> <span>{cart.length}</span>
+            <h3>Order Summary </h3> 
+            <span>{cart.length}</span>
           </div>
           {cart.map((item, i) => (
             <div className="cart-item">
@@ -26,7 +27,7 @@ const OrderSummary = () => {
               </div>
             </div>
           ))}
-          ;
+          
         </div>
       </div>
     </div>

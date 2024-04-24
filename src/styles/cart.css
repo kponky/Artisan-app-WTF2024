@@ -229,6 +229,40 @@
 }
 
 
+.order-wrapper .cart-card .cart-card-header .item-count {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-inline: 24px;
+  padding-bottom: 20px;
+
+}
+
+.order-wrapper .cart-card .cart-card-header .item-count h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #101928
+}
+
+.order-wrapper .cart-card .cart-card-header .item-count span {
+
+  background-color: #2D2E79;
+  color: white;
+  border-radius: 50%;
+  height: 35px;
+  width: 37px;
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  Padding: 6px 12px;
+}
+
+
+/* oder styling  */
+
+.order-wrapper .cart-card {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
 
 .order-wrapper .cart-card .cart-item {
   width: 100%;
@@ -237,6 +271,7 @@
   gap: 1rem;
   padding-inline: 24px;
   align-items: center;
+
 }
 
 

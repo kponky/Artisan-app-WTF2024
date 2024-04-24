@@ -14,7 +14,7 @@ const OrderSummary = () => {
             <span>{cart.length}</span>
           </div>
           {cart.map((item, i) => (
-            <div className="cart-item">
+            <div key={i} className="cart-item">
               <div className="cart-item_image">
                 <img src={item.image} alt={item.title} />
               </div>

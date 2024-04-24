@@ -4,6 +4,7 @@ a{
 
   ul{
     list-style: none;
+    color: #fff;
   }
 
 
@@ -73,6 +74,8 @@ size: 18px;
 
 .footer-card .footer-col .footer-links li {
   margin-top: 20px;
+  color: #fff;
+
  
 }
 

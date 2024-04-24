@@ -15,7 +15,7 @@ const PaymentInfo = () => {
     // <PaymentConfirmation />
     <div className="paymentInfo-card">
       <div className="paymentInfo-header">
-        <h6>Payment Information</h6>
+        <h3>Payment Information</h3>
       </div>
       <div className="payment-options">
         <p>Pay With</p>
@@ -23,31 +23,33 @@ const PaymentInfo = () => {
           <div className="radio-btn">
             <input type="radio" name="" id="" />
           </div>
-          <div className="radio-text">Debit or Credit Card</div>
+          <div className="radio-text"> <p>Debit or Credit Card</p></div>
         </div>
         <div className="payment-opt">
           <div className="radio-btn">
             <input type="radio" name="" id="" />
           </div>
-          <div className="radio-text">Pay with Crpto</div>
+          <div className="radio-text"><p>Pay with Crpto</p> </div>
         </div>
         <div className="payment-opt">
           <div className="radio-btn">
             <input type="radio" name="" id="" />
           </div>
-          <div className="radio-text">Pay on Delivery</div>
+          <div className="radio-text"><p>Pay on Delivery</p></div>
         </div>
       </div>
 
       <div className="card-info">
-        <form action="">
+      <p>Enter Card Information</p>
+        <form action="" className="form-card1">
           <label htmlFor="cardInfo">Cardholder Name</label>
-          <div>
+          <div className="form-group">
             <input
               type="text"
               name="cardholderName"
               id="cardholderName"
               placeholder="Alexandra McPherson Grey"
+              className="form-control"
               required
             />
           </div>
@@ -58,6 +60,8 @@ const PaymentInfo = () => {
               name="cardNumber"
               id="cardNumber"
               placeholder="5061 2345 6789 1234"
+              className="form-control"
+
               required
             />
           </div>
@@ -65,14 +69,19 @@ const PaymentInfo = () => {
             <div className="exp">
               <label htmlFor="expiryDate">Expiry Date </label>
               <input type="date" name="date" id="date" placeholder="09/2024">
-                <FontAwesomeIcon icon={faCalendar} />
+                <FontAwesomeIcon icon={faCalendar} 
+                className="form-control"
+                />
+                
               </input>
             </div>
 
             <div className="cvv">
               <label htmlFor="cvv">CVV</label>
               <input type="number" name="number" id="number" placeholder="223">
-                <FontAwesomeIcon icon={faLock} />{" "}
+                <FontAwesomeIcon icon={faLock} 
+                className="form-control"
+                />
               </input>
             </div>
           </div>
@@ -83,7 +92,7 @@ const PaymentInfo = () => {
 
           <div className="sub">
             <div>
-              <p>SubTotal</p> <span>{item.total}</span>
+              <p>SubTotal</p> <span>item.total</span>
             </div>
             <div>
               <p>Tax(10%)</p> <span>$4.50</span>
@@ -95,7 +104,7 @@ const PaymentInfo = () => {
 
           <div className="total">
             <div>
-              <p>Total</p> <span>{item.total}</span>
+              <p>Total</p> <span>item.total</span>
             </div>
           </div>
 

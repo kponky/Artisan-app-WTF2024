@@ -189,6 +189,11 @@ img {
   display: none;
 }
 
+.menubtn .icon{
+  color: var(--buttonColor);
+
+}
+
 .nav-btn .btn:hover {
   border: 3px solid #02096b;
   background: transparent;

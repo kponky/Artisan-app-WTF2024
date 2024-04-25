@@ -1,10 +1,10 @@
-import Img1 from "../assets/artisan 8.jpg";
+import Img1 from "../assets/Af 1jpg.jpg";
 import Img2 from "../assets/tailor 2.jpg";
 import Img3 from "../assets/artisan 10.jpg";
 import Img4 from "../assets/artisan 7.jpg";
 import Img5 from "../assets/artisan 11.jpg";
-import Img6 from "../assets/training 1.jpg";
-import Img7 from "../assets/engineer 1.jpg";
+import Img6 from "../assets/bambo carpenters.jpg";
+import Img7 from "../assets/welder.jpg";
 import Img8 from "../assets/artisan 10.jpg";
 
 export const advanceData = [

@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/dashboard-header.css";
 import {
+  faBars,
   faCartShopping,
   faMessage,
   faSearch,
@@ -9,13 +10,15 @@ import {
 import passport from "../assets/passport.jpg";
 import { useCart } from "../contexts/CartContext";
 
-const DashboardHeader = ({ openCart, setOpenCart }) => {
+const DashboardHeader = ({ openCart, setOpenCart, setShowSidebar }) => {
   const { cart } = useCart();
 
   return (
     <div className="dashboard-header">
       <div className="dashboard-header-inner">
-        <button className="collapse-btn">Menu</button>
+        <button className="collapse-btn" onClick={() => setShowSidebar(true)}>
+        <FontAwesomeIcon icon={faBars} size="2x"/>
+        </button>
         <div className="search-input">
           <div className="search-icon">
             <FontAwesomeIcon icon={faSearch} className="icon" />

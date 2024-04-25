@@ -49,7 +49,7 @@
 .discounted-card .card-items .card-img img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  margin-bottom: 11px;
 }
 
 .discounted-card .card-items .item1 {
@@ -133,5 +133,10 @@ padding-inline: 0.5rem;
   font-size: 17px;
   color: #8C8C8C;
  
+}
+  @media screen and (max-width: 768px) {
+ .discounted-card{
+  grid-template-columns: repeat(2, 1fr);
+ }
 
 }

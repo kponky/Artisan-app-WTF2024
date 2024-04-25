@@ -1,13 +1,18 @@
-// import React from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { sideNavMenu } from "../data/sidebarNavlist";
 import "../styles/dashboard-sidebar.css";
 import logo from "../assets/Logo.png";
 import { auth } from "../firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCog,
+  faSearch,
+  faSignOutAlt,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 
-const DashboardSidebar = () => {
+const DashboardSidebar = ({setShowSidebar, setOpenCart}) => {
   const { pathname, hash } = useLocation();
 
   const handleLogout = () => {
@@ -21,14 +26,37 @@ const DashboardSidebar = () => {
             <img src={logo} alt="artisan logo" />
           </Link>
         </div>
+
+        <button
+          className="close-menu-btn"
+          onClick={() => setShowSidebar(false)}
+        >
+          <FontAwesomeIcon icon={faTimes} size="2x" />
+        </button>
       </div>
+
+      {/* search bar on mobile */}
+
+      <div className="search-input">
+        <div className="search-icon">
+          <FontAwesomeIcon icon={faSearch} className="icon" />
+        </div>
+        <input type="text" placeholder="Search something here" />
+      </div>
+
       <div className="side-bottom">
         <h5>MENU</h5>
         <ul>
           {sideNavMenu.map(({ label, to }, i) => {
             const isActive = pathname === to || (hash && hash.includes(to));
             return (
-              <li key={i}>
+              <li
+                key={i}
+                onClick={() => {
+                  setShowSidebar(false);
+                  setOpenCart(false);
+                }}
+              >
                 <Link
                   to={to}
                   className={`sidebar-items ${isActive ? "active" : ""}`}

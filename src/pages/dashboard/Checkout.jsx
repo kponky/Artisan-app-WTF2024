@@ -11,13 +11,13 @@ const Checkout = () => {
         <div className="left-top">
           <OrderSummary />
         </div>
-          <div className="right">
-          <PaymentInfo />
+        <div className="right">
+          <DeliveryInfo />
         </div>
       </div>
       <div className="left-bottom">
-          <DeliveryInfo />
-        </div>
+        <PaymentInfo />
+      </div>
     </div>
   );
 };

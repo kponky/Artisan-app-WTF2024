@@ -40,3 +40,12 @@
   padding-block: 2rem;
   position: relative;
 }
+
+@media screen and (max-width: 768px) {
+
+  .dashboard .sidebar-container{
+    left: -100%;
+    background-color: red;
+    transition: left 0.5s ease-in-out;
+  }
+}

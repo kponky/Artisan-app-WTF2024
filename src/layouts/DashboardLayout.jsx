@@ -9,6 +9,7 @@ import Cart from "../Components/Cart";
 const DashboardLayout = () => {
   const { userLoggedIn } = useContext(AuthContext);
   const [openCart, setOpenCart] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   // if (!userLoggedIn) {
   //   return <Navigate to={"/login"} replace={true} />;
@@ -16,11 +17,17 @@ const DashboardLayout = () => {
 
   return (
     <div className="dashboard">
-      <div className="sidebar-container">
-        <DashboardSidebar />
+      <div className={`sidebar-container ${showSidebar && "show"}`}>
+        <DashboardSidebar
+        showSidebar = {setShowSidebar}
+        setShowSidebar={setOpenCart} 
+        />
       </div>
       <div className="inner-wrapper">
-        <DashboardHeader openCart={openCart} setOpenCart={setOpenCart} />
+        <DashboardHeader 
+        openCart={openCart} 
+        setOpenCart={setOpenCart}
+        setShowSidebar={setShowSidebar} />
         {openCart && (
           <div className="cart-modal">
             <Cart setOpenCart={setOpenCart} />

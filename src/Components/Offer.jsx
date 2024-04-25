@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/offer.css";
-import image1 from "../assets/Frame 8 (1).png";
-import image2 from "../assets/Frame 14.png";
-import image3 from "../assets/Frame 8 (2).png";
-import image4 from "../assets/Frame 9.png";
+import image1 from "../assets/artisan 8.jpg";
+import image2 from "../assets/leather material.jpg";
+import image3 from "../assets/artisan networking.jpg";
+import image4 from "../assets/woven bag 1.jpg";
 
 const Offer = () => {
   return (

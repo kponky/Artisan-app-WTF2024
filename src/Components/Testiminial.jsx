@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
-import testImage from '../assets/Frame 15.png'
+import testImage from '../assets/shoe maker 2.jpg'
 import testImage2 from '../assets/artisan5.jpg';
-import testImage3  from '../assets/artsan 2.jpg'
-import testImage4 from '../assets/artsan 3.jpg';
+import testImage3  from '../assets/tailor black.jpg'
+import testImage4 from '../assets/clay man.jpg';
 import testImage5 from '../assets/artsisan 1.jpg'
 import 'swiper/css';
 import 'swiper/css/pagination';

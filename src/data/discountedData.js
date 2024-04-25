@@ -1,5 +1,5 @@
-import Img1 from "../assets/artisan 6.jpg";
-import Img2 from "../assets/artist.jpg";
+import Img1 from "../assets/Af 1jpg.jpg";
+import Img2 from "../assets/african bangle 1.jpg";
 import Img3 from "../assets/ribbons.jpg";
 import Img4 from "../assets/pencils.jpg";
 import Img5 from "../assets/threads.jpg";

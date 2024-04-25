@@ -1,6 +1,6 @@
 .paymentInfo-card {
-  margin-top: 35px;
-  width: 40%;
+  /* margin-top: 35px; */
+  width: 100%;
   height: 100%;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   padding-bottom: 35px;
@@ -9,12 +9,12 @@
 }
 
 .paymentInfo-card h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 28.8px;
   color: #101928;
   padding-block: 20px;
-  padding-inline: 24px;
+  margin-bottom: 20px;
 }
 
 .paymentInfo-card .payment-options p {
@@ -22,6 +22,7 @@
   font-size: 16px;
   font-weight: 700;
   color: #101928;
+  margin-block: 10px;
 }
 
 .paymentInfo-card .payment-options .payment-opt p {
@@ -32,9 +33,13 @@
 
 }
 
-.payment-opt .radio-btn {
+
+.payment-options .payment-opt {
   display: flex;
   gap: 30px;
+  align-items: center;
+  margin-block: 15px;
+
 }
 
 .paymentInfo-card .card-info {
@@ -42,35 +47,37 @@
   flex-direction: column;
   width: 100%;
   gap: 20px;
-  padding-inline: 24px;
+  margin-top: 50px;
+  /* padding-inline: 24px; */
 }
 
 .paymentInfo-card .card-info p {
-
   font-size: 16px;
   font-weight: 700;
   line-height: 22.4px;
   color: #101928;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
-.paymentInfo-card .card-info  .form-card1 {
+.paymentInfo-card .card-info .form-card1 {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-inline: 24px;
+  margin-top: 10px;
 
 }
+
 .paymentInfo-card .card-info label {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 22.4px;
-  margin-bottom: 8px;
+  margin-top: 20px;
 
 }
 
-.paymentInfo-card .card-info .form-control{
+.paymentInfo-card .card-info .form-control {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -79,9 +86,65 @@
   resize: none;
   padding-inline: 1rem;
   /* outline: none; */
-  padding: 10px;
+  padding: 15px;
   background: transparent;
   color: #98A2B3;
+  margin-block: 10px;
 
+}
+
+.paymentInfo-card .card-info .exp-cvv {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 20px;
+}
+
+.paymentInfo-card .card-info .exp-cvv .cvv {
+  position: relative;
+}
+
+.paymentInfo-card .card-info .exp-cvv .cvv .icon {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  color: #98A2B3;
+}
+
+.paymentInfo-card .paymentopt-bottom {
+  margin-top: 10px;
+}
+.payment-section .payment-total{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px;
+}
+
+.paymentInfo-card .total-card{
+  padding-block: 20px;
+}
+
+.paymentInfo-card .total-card .total{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paymentInfo-card .info-btn .btn{
+  width: 100%;
+  margin-top: 40px;
+}
+
+.paymentInfo-card .info-btn .btn:hover{
+  border: 2px solid #2D2E79;
+}
+
+.paymentInfo-card .line{
+  width: 100%;
+  height: 2px;
+  border: 1px solid #98A2B3;
+  margin-block: 20px;
 }
 

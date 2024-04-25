@@ -116,16 +116,31 @@
 
 
 @media screen and (max-width: 768px) {
-  .dashboard-header {
-     flex-direction: column;
-   }
- 
-  .dashboard-sidebar {
+  .dashboard-header .dashboard-header-inner .collapse-btn {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 0;
+  }
+
+  .dashboard-header .dashboard-header-inner .search-input {
+    display: none;
+  }
+
+  .dashboard-header-inner .header-right .user-btn .user-info{
+    display: none;
+  }
+
+  
+}
+  /* .dashboard-sidebar {
      width: 100%;
      position: relative;
    }
  
   .dashboard-sidebar-item {
      width: 100%;
-   }
- }
+   } */
+ 

@@ -233,3 +233,15 @@
   border: 2px solid;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+.single-discounted .single-discounted_inner .grid-discount{
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.single-discounted .single-discounted_inner .grid-discount .grid-left .img-wrapper{
+height: 248px;
+}
+
+
+}

@@ -7,31 +7,25 @@ const OrderSummary = () => {
 
   return (
     <div className="order-wrapper">
-      <div className="cart-card">
-        <div className="cart-card-header">
-          <div className="item-count">
-            <h3>Order Summary </h3> 
-            <span>{cart.length}</span>
-          </div>
-          {cart.map((item, i) => (
-            <div key={i} className="cart-item">
-              <div className="cart-item_image">
-                <img src={item.image} alt={item.title} />
-              </div>
-
-              <div className="card-item_detail" key={i}>
-                <div className="card__item1">
-                  <p>{item.title}</p>
-                  <p>{formatCurrency(item.discount, "USD")}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-          
+  <div className="order-wrapper-header">
+    <h3>Order Summary </h3>
+    <span>{cart.length}</span>
+  </div>
+  {cart.map((item, i) => (
+    <div key={i} className="cart-item">
+      <div className="cart-item_image">
+        <img src={item.image} alt={item.title} />
+      </div>
+      <div className="card-item_detail" key={i}> {/* Closing tag was missing here */}
+        <div className="card__item1">
+          <p>{item.title}</p>
+          <p>{formatCurrency(item.discount, "USD")}</p>
         </div>
       </div>
     </div>
-  );
-};
+  ))}
+  </div>
+)}
 
-export default OrderSummary;
+  export default OrderSummary;
+

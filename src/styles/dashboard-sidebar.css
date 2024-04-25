@@ -119,6 +119,7 @@
 
 .dashboard-sidebar .search-input .search-icon {
   display: none;
+  
 }
 
 .dashboard-sidebar .search-input input {
@@ -133,10 +134,26 @@
 @media screen and (max-width: 768px) {
   .dashboard-sidebar {
     border-right: 1px solid gray;
+    height: 100%;
+   padding-bottom: 60px;
+
   }
 
   .dashboard-sidebar .search-input {
     display: block;
+  }
+
+  .dashboard-sidebar .search-input .search-icon {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    display: block;
+    color:  var(--buttonColor);;
+  }
+ 
+  .dashboard-sidebar .search-input input:focus {
+    outline: 0;
+    border: 1px solid var(--buttonColorLight);
   }
 
  .dashboard-sidebar .side-top .close-menu-btn{
@@ -146,6 +163,10 @@
   background: transparent;
   border: 0;
   cursor: pointer;
+ }
+
+ .dashboard-sidebar .side-top .close-menu-btn .icon{
+  color:  var(--buttonColor);
  }
  
 }

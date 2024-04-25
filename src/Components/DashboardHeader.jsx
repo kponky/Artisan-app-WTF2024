@@ -17,7 +17,7 @@ const DashboardHeader = ({ openCart, setOpenCart, setShowSidebar }) => {
     <div className="dashboard-header">
       <div className="dashboard-header-inner">
         <button className="collapse-btn" onClick={() => setShowSidebar(true)}>
-        <FontAwesomeIcon icon={faBars} size="2x"/>
+        <FontAwesomeIcon icon={faBars} size="2x" className="icon"/>
         </button>
         <div className="search-input">
           <div className="search-icon">

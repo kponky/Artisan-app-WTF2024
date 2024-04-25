@@ -11,12 +11,17 @@ import {
   faSignOutAlt,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
+import { set } from "firebase/database";
 
-const DashboardSidebar = ({setShowSidebar, setOpenCart}) => {
+const DashboardSidebar = ({ setShowSidebar, setOpenCart }) => {
   const { pathname, hash } = useLocation();
 
   const handleLogout = () => {
     auth.signOut();
+  };
+
+  const handleMenuClose = () => {
+    setShowSidebar(false);
   };
   return (
     <div className="dashboard-sidebar">
@@ -27,11 +32,8 @@ const DashboardSidebar = ({setShowSidebar, setOpenCart}) => {
           </Link>
         </div>
 
-        <button
-          className="close-menu-btn"
-          onClick={() => setShowSidebar(false)}
-        >
-          <FontAwesomeIcon icon={faTimes} size="2x" />
+        <button className="close-menu-btn" onClick={() => handleMenuClose()}>
+          <FontAwesomeIcon icon={faTimes} size="2x"  className="icon"/>
         </button>
       </div>
 
@@ -80,7 +82,7 @@ const DashboardSidebar = ({setShowSidebar, setOpenCart}) => {
             <li>
               <div className="signout-logout">
                 <FontAwesomeIcon icon={faSignOutAlt} className="icon" />
-                <button onClick={() => handleLogout}>Logout</button>
+                <button onClick={() => handleLogout()}>Logout</button>
               </div>
             </li>
           </ul>

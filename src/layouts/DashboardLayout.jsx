@@ -17,17 +17,19 @@ const DashboardLayout = () => {
 
   return (
     <div className="dashboard">
-      <div className={`sidebar-container ${showSidebar && "show"}`}>
-        <DashboardSidebar
-        showSidebar = {setShowSidebar}
-        setShowSidebar={setOpenCart} 
+    <div className={`sidebar-container ${showSidebar  && "show"}`}>
+    <DashboardSidebar
+          showSidebar={showSidebar}
+          setShowSidebar={setShowSidebar}
+          setOpenCart={setOpenCart}
         />
       </div>
       <div className="inner-wrapper">
-        <DashboardHeader 
-        openCart={openCart} 
-        setOpenCart={setOpenCart}
-        setShowSidebar={setShowSidebar} />
+        <DashboardHeader
+          openCart={openCart}
+          setOpenCart={setOpenCart}
+          setShowSidebar={setShowSidebar}
+        />
         {openCart && (
           <div className="cart-modal">
             <Cart setOpenCart={setOpenCart} />

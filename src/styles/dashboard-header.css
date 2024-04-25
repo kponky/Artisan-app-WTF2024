@@ -119,11 +119,18 @@
   .dashboard-header .dashboard-header-inner .collapse-btn {
     display: block;
     cursor: pointer;
-    width: 30px;
+    width: 10px;
     height: 30px;
     background: transparent;
     border: 0;
   }
+
+  .dashboard-header .dashboard-header-inner .collapse-btn .icon{
+    color: var(--buttonColor);
+    font-size: 30px;
+  }
+
+ 
 
   .dashboard-header .dashboard-header-inner .search-input {
     display: none;

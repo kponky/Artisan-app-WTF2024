@@ -23,6 +23,7 @@
   margin-left: 280px;
   position: relative;
 }
+
 .dashboard .inner-wrapper .cart-modal {
   position: absolute;
   width: 100%;
@@ -42,10 +43,24 @@
 }
 
 @media screen and (max-width: 768px) {
-
-  .dashboard .sidebar-container{
+  .dashboard .sidebar-container {
     left: -100%;
-    background-color: red;
     transition: left 0.5s ease-in-out;
   }
+
+  .dashboard .sidebar-container.show {
+    display: flex;
+    left: 0;
+  }
+
+  .dashboard .inner-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dashboard .inner-wrapper .main-content {
+    padding-inline: 1rem;
+    padding-block: 1rem;
+  }
 }
+

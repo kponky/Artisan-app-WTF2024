@@ -55,7 +55,7 @@ const Cart = ({ setOpenCart }) => {
 <div className="cart-bottom">
 <div className="cart-total">
   <p>Subtotal:</p>
-  <p>{formatCurrency(total, "USD")}</p>
+  <p>{formatCurrency(total, "NGN")}</p>
 </div>
 <div className="line"></div>
 <div className="cart-checkout">

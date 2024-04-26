@@ -248,12 +248,14 @@
   }
   
   .cart-card .cart-items .cart-item {
-    grid-template-columns: 100px auto;
+    grid-template-columns: 150px auto;
   }
   .cart-card .cart-items .cart-item .cart-item_image {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
   }
+  
   
   }
 

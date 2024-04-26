@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import { discountData } from "../../../data/discountedData";
 import "./discounted.css";
 import { useCart } from "../../../contexts/CartContext";
+import { formatCurrency } from "../../../utils/helpers";
 
 const SinglePageDiscount = () => {
   const { addToCart } = useCart();
@@ -54,8 +55,9 @@ const SinglePageDiscount = () => {
               <span>(121)</span>
             </div>
             <div className="pricing">
-              <h6>$ {item.discount}</h6>
-              <span> ${item.price}.00</span>
+              <h6>{formatCurrency(item.discount, "NGN")}</h6>
+
+              <span> {formatCurrency(item.price, "NGN")}</span>
             </div>
             <div className="quantity-wrapper">
               <h5>Quantity</h5>
@@ -104,7 +106,9 @@ const SinglePageDiscount = () => {
             </div>
 
             <div className="buttons">
-              <button className="btn">Buy Now</button>
+              <Link to="/dashboard/checkout">
+                <button className="btn">Buy Now</button>
+              </Link>
               <button className="btn" onClick={() => addToCart(item, item.id)}>
                 Add to Cart
               </button>

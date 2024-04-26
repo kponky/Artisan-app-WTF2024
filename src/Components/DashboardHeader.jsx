@@ -9,10 +9,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import passport from "../assets/passport.jpg";
 import { useCart } from "../contexts/CartContext";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 const DashboardHeader = ({ openCart, setOpenCart, setShowSidebar }) => {
   const { cart } = useCart();
 
+
+  const {currentUser} = useContext(AuthContext)
   return (
     <div className="dashboard-header">
       <div className="dashboard-header-inner">
@@ -44,7 +48,7 @@ const DashboardHeader = ({ openCart, setOpenCart, setShowSidebar }) => {
             </div>
             <div className="user-info">
               <span className="u-info-name">John Doe</span>
-              <span className="u-info-email">johndoe@gmail.com</span>
+              <span className="u-info-email">johndoe@gamil.com</span>
             </div>
           </div>
         </div>

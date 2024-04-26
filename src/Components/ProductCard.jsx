@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useCart } from "../contexts/CartContext";
+import { formatCurrency } from "../utils/helpers";
 
 const ProductCard = (props) => {
   const item = props;
@@ -20,7 +21,9 @@ const ProductCard = (props) => {
           <p>{item.title}</p>
         </Link>
         <span>
-          $ <span className="p-item">{item.discount}</span>
+          <span className="p-item">
+          <p>{formatCurrency(item.discount, "NGN")}</p> 
+          </span>
         </span>
       </div>
       <div className="item2">
@@ -33,10 +36,9 @@ const ProductCard = (props) => {
           <span>(91)</span>
         </div>
         <div className="price">
-          <p>
-            $ <span>{item.price}</span>
-            .00
-          </p>
+        <p>
+        <p>{formatCurrency(item.price, "NGN")}</p> {/* Corrected here */}
+            </p>
         </div>
       </div>
       <div className="btn-wrap">
@@ -49,3 +51,8 @@ const ProductCard = (props) => {
 };
 
 export default ProductCard;
+// <p>
+//         <span>{item.price}</span>
+//         <p>{formatCurrency(item.price, "NGN")}</p> {/* Corrected here */}
+//         .00
+//       </p>

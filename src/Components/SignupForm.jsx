@@ -7,8 +7,13 @@ import groupVector from "../assets/Group.png";
 import googleIcon from "../assets/Google.png";
 import outlookIcon from "../assets/Outlook.png";
 import { Link, useNavigate } from "react-router-dom";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { db } from "../firebase";
+import {
+  GoogleAuthProvider,
+  OAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
+import { auth, db } from "../firebase";
 import { getDocs, addDoc, collection, where, query } from "firebase/firestore";
 
 const SignupForm = () => {
@@ -25,6 +30,11 @@ const SignupForm = () => {
   const [loading, setLoading] = useState(false);
 
   const dref = collection(db, "auth");
+
+  const provider = {
+    google: new GoogleAuthProvider(),
+    outlook: new OAuthProvider("microsoft.com"),
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -116,6 +126,37 @@ const SignupForm = () => {
         }
       }
     } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      setLoading(true);
+      const res = await signInWithPopup(auth, provider.google);
+      if (res) {
+        alert("Login Successful");
+        navigate("/dashboard");
+      }
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  const handleMicrosoftSignIn = async () => {
+    try {
+      setLoading(true);
+      const res = await signInWithPopup(auth, provider.outlook);
+      if (res) {
+        alert("Login Successful");
+        navigate("/dashboard");
+      }
+    } catch (error) {
+      alert(error);
       console.log(error);
     } finally {
       setLoading(false);
@@ -266,16 +307,23 @@ const SignupForm = () => {
           </p>
 
           <span>
-           
             <div></div>or Continue with <div></div>
           </span>
         </div>
 
         <div className="google-outlook-btn">
-          <button type="button" className="btn form-btn googlebtn">
+          <button
+            type="button"
+            className="btn form-btn googlebtn"
+            onClick={handleGoogleSignIn}
+          >
             <img src={googleIcon} className="g-btn-img" /> Google
           </button>
-          <button type="button" className="btn form-btn outlookbtn">
+          <button
+            type="button"
+            className="btn form-btn outlookbtn"
+            onClick={handleMicrosoftSignIn}
+          >
             {" "}
             <img src={outlookIcon} className="o-btn-img" /> Outlook
           </button>

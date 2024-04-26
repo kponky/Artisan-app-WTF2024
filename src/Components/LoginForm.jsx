@@ -129,7 +129,9 @@ const LoginForm = () => {
   return (
     <div className="loginform-wrapper ">
       <div className="login-form-container container">
-        <img src={logo} alt="Logo" className="form-logo" />
+      <Link to= "/">
+      <img src={logo} alt="Logo" className="form-logo" />
+      </Link>
         <div className="form-text">
           <h6>Hi, Welcome back!! </h6>
           <p>Login to your account to enjoy</p>
@@ -222,8 +224,9 @@ const LoginForm = () => {
           >
             <img src={googleIcon} className="g-btn-img" /> Google
           </button>
-          <button type="button" className="btn form-btn outlookbtn">
-            {" "}
+          <button type="button" className="btn form-btn outlookbtn"
+          onClick={handleMicrosoftSignIn}>
+         
             <img src={outlookIcon} className="o-btn-img" /> Outlook
           </button>
         </div>

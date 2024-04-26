@@ -61,9 +61,9 @@ const Navbar = () => {
         </ul>
 
         {userLoggedIn ? (
-          <div>
+          <div className="userlogin-details">
             <p>{currentUser?.displayName}</p>
-            <button onClick={handleLogout}>Logout</button>
+            <button onClick={handleLogout} className = "btn">Logout</button>
           </div>
         ) : (
           <Link to="/signup">

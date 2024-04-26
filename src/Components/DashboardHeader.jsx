@@ -14,9 +14,9 @@ import { AuthContext } from "../contexts/AuthContext";
 
 const DashboardHeader = ({ openCart, setOpenCart, setShowSidebar }) => {
   const { cart } = useCart();
+  const {userLoggedIn, currentUser} = useContext(AuthContext)
 
 
-  const {currentUser} = useContext(AuthContext)
   return (
     <div className="dashboard-header">
       <div className="dashboard-header-inner">
@@ -42,15 +42,19 @@ const DashboardHeader = ({ openCart, setOpenCart, setShowSidebar }) => {
             <FontAwesomeIcon icon={faMessage} className="icon" />
             <span className="badge">4</span>
           </button>
-          <div className="user-btn">
+          {userLoggedIn  && currentUser &&(
+            
+            <div className="user-btn">
             <div className="user-img">
-              <img src={passport} alt="" />
+              <img src={currentUser.photoUrl} alt="" />
             </div>
             <div className="user-info">
-              <span className="u-info-name">John Doe</span>
-              <span className="u-info-email">johndoe@gamil.com</span>
+              <span className="u-info-name">{currentUser.displayName}</span>
+              <span className="u-info-email">{currentUser.email}</span>
             </div>
           </div>
+          )}
+          
         </div>
       </div>
     </div>
@@ -58,3 +62,4 @@ const DashboardHeader = ({ openCart, setOpenCart, setShowSidebar }) => {
 };
 
 export default DashboardHeader;
+

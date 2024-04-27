@@ -77,7 +77,7 @@ const ShowcaseSinglePage = () => {
             </div>
 
             <div className="grid-bottom">
-            <div className="line"></div>
+              <div className="line"></div>
               <div className="txt1">
                 <p> Explore the sophiisticated artistry behind this creation</p>
               </div>
@@ -120,69 +120,89 @@ const ShowcaseSinglePage = () => {
               </div>
 
               <div className="description">
-              <p>Description</p>
+                <p>Description</p>
                 <span>{item.description}</span>
               </div>
 
               <div className="quantity-wrapper">
-              <div className="quantity-card">
-              <h5>Quantity</h5>
+                <div className="quantity-card">
+                  <h5>Quantity</h5>
 
-              <div className="quantity-btns">
-              <button onClick={handleDecrement}>
-                <FontAwesomeIcon icon={faMinus} className="icon" />
-              </button>
-              <span>{quantity}</span>
-              <button onClick={handleIncrement}>
-                <FontAwesomeIcon icon={faPlus} className="icon" />
-              </button>
-            </div>
+                  <div className="quantity-btns">
+                    <button onClick={handleDecrement}>
+                      <FontAwesomeIcon icon={faMinus} className="icon" />
+                    </button>
+                    <span>{quantity}</span>
+                    <button onClick={handleIncrement}>
+                      <FontAwesomeIcon icon={faPlus} className="icon" />
+                    </button>
+                  </div>
+                  <div>
+                    <span>
+                      Only <strong>12 items</strong> left! <br />
+                      Don't miss it
+                    </span>
+                  </div>
+                </div>
 
-            <div>
-            <span>
-            Only <strong>12 items</strong> left! <br />
-            Don't miss it
-          </span>
-            </div>
-
-              </div>
-                 
-
-                  <div className="item-revw">
-                    <p>12phots.22coments</p>
+                <div className="item-revw">
+                  <h6>Reviews</h6>
+                  <p>12phots.22coments</p>
+                  <div className="flex-img">
                     <div className="revv-img">
-                      <img src="" alt="" />
-                      {/* <img src="" alt="" />
-                      <img src="" alt="" />
-                      <img src="" alt="" />
-                      <img src="" alt="" />
-                      <img src="" alt="" />
-                      <img src="" alt="" />*/}
+                      <img src={item.image} alt="" />
                     </div>
+                    <div className="revv-img">
+                      <img src={item.image} alt="" />
+                    </div>
+                    <div className="revv-img">
+                      <img src={item.image} alt="" />
+                    </div>
+                    <div className="revv-img">
+                      <img src={item.image} alt="" />
+                    </div>
+                    <div className="revv-img">
+                      <img src={item.image} alt="" />
+                    </div>
+                    <div className="revv-img">
+                      <img src={item.image} alt="" />
+                    </div>
+                    <div className="revv-img over">
+                      <img src={item.image} alt="" />
+                    </div>
+                    <div className="overlay1">
+                      <p>+9</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="comments-wrapper">
+                  <div className="comments-img">
+                    <img
+                      src={item.vendorImage}
+                      alt=""
+                      className="vendor-image"
+                    />
                   </div>
 
-                  <div className="comments-wrapper">
-                    <div className="comments-img">
-                      <img src="" alt="" />
+                  <div className="commets-card">
+                    <h6>Liela sheriff</h6>
+                    <div className="stars">
+                      <FontAwesomeIcon icon={faStar} className="icon" />
+                      <FontAwesomeIcon icon={faStar} className="icon" />
+                      <FontAwesomeIcon icon={faStar} className="icon" />
+                      <FontAwesomeIcon icon={faStar} className="icon" />
+                      <FontAwesomeIcon icon={faStar} className="icon" />
+                      <span> 6hours ago</span>
                     </div>
-                    <div className="commets-card">
-                      <h6>Liela sheriff</h6>
-                      <div className="stars">
-                        <FontAwesomeIcon icon={faStar} className="icon" />
-                        <FontAwesomeIcon icon={faStar} className="icon" />
-                        <FontAwesomeIcon icon={faStar} className="icon" />
-                        <FontAwesomeIcon icon={faStar} className="icon" />
-                        <FontAwesomeIcon icon={faStar} className="icon" />
-                        <span> 6hours ago</span>
-                      </div>
-                      <div className="comm">
-                        <p>
-                          Absolutely stunning and very handy. The material is
-                          one of the finest piece ever. Highly recommended{" "}
-                        </p>
-                      </div>
+                    <div className="comm">
+                      <p>
+                        Absolutely stunning and very handy. The material is one
+                        of the finest piece ever. Highly recommended{" "}
+                      </p>
                     </div>
                   </div>
+                </div>
               </div>
             </div>
 
@@ -190,7 +210,10 @@ const ShowcaseSinglePage = () => {
               <Link to="/dashboard/checkout">
                 <button className="btn">Buy Now</button>
               </Link>
-              <button className="btn" onClick={() => addToCart(item, item.id)}>
+              <button
+                className="btn addtocart"
+                onClick={() => addToCart(item, item.id)}
+              >
                 Add to Cart
               </button>
 

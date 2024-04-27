@@ -1,35 +1,36 @@
 import React from "react";
+import { useCart } from "../contexts/CartContext";
+import { formatCurrency } from "../utils/helpers";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useCart } from "../contexts/CartContext";
-import { formatCurrency } from "../utils/helpers";
 
-const ProductCard = (props) => {
+
+const ProductCard4 = (props) => {
   const item = props;
   const { addToCart } = useCart();
 
   return (
     <div className="card-items">
-      <Link to={`/dashboard/discounted-materials/${item.id}`}>
+      <Link to={`/dashboard/showcase-sales/${item.id}`}>
         <div className="card-img">
           <img src={item.image} alt="" />
         </div>
       </Link>
       <div className="item1">
-        <Link to={`/dashboard/discounted-materials/${item.id}`}>
-          <p>{item.title}</p>
+        <Link to={`/dashboard/showcase-sales/${item.id}`}>
+          <div className="card-title">
+            <p>{item.title}</p>
+          </div>
         </Link>
         <span>
           <span className="p-item">
-            <p>{formatCurrency(item.discount, "NGN")}</p>
+            <p> {formatCurrency(item.discount, "NGN")}</p>
           </span>
         </span>
       </div>
       <div className="item2">
         <div className="stars">
-          <FontAwesomeIcon icon={faStar} className="icon" />
-          <FontAwesomeIcon icon={faStar} className="icon" />
           <FontAwesomeIcon icon={faStar} className="icon" />
           <FontAwesomeIcon icon={faStar} className="icon" />
           <FontAwesomeIcon icon={faStar} className="icon" />
@@ -50,9 +51,4 @@ const ProductCard = (props) => {
   );
 };
 
-export default ProductCard;
-// <p>
-//         <span>{item.price}</span>
-//         <p>{formatCurrency(item.price, "NGN")}</p> {/* Corrected here */}
-//         .00
-//       </p>
+export default ProductCard4;

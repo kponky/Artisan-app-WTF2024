@@ -1,6 +1,7 @@
 import React from "react";
 import { showdata } from "../../data/showcaseData";
-import ProductCard from "../../Components/ProductCard";
+// import ProductCard from "../../Components/ProductCard";
+import ProductCard4 from "../../Components/ProductCard4";
 
 const ShowcaseSales = () => {
   return (
@@ -11,7 +12,7 @@ const ShowcaseSales = () => {
       </div>
       <div className="discounted-card">
         {showdata.map((item, i) => (
-          <ProductCard key={i} {...item} />
+          <ProductCard4 key={i} {...item} />
         ))}
       </div>
     </div>

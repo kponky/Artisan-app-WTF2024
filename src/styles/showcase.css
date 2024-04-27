@@ -1,0 +1,277 @@
+.single-showcasing {
+  width: 100%;
+}
+
+.single-showcasing .breadcrumbs ol {
+  list-style: none;
+  gap: 10px;
+  display: flex;
+}
+
+.single-showcasing .breadcrumbs ol li {
+  color: #667185;
+  font-weight: 500;
+  font-size: 500;
+  line-height: 22.4px;
+}
+
+.single-showcasing .breadcrumbs ol li a {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #03045E;
+}
+
+.single-showcasing .single-showcasing_inner {
+  width: 100%;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid grey;
+
+
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-left .img-wrapper {
+  height: 548px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-left .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-right .title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-right .desc {
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-right .rating .icon {
+  color: orangered;
+  font-size: 13px;
+  padding-inline: 2px;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-right .rating span {
+  color: #344054;
+  font-size: 16px;
+  font-weight: 500;
+  padding-inline: 10px;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-right .pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 25px;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-right .pricing h6 {
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-family: DM Sans;
+  font-size: 24px;
+  color: #101928;
+}
+
+.single-showcasing .single-showcasing_inner .grid-discount .grid-right .pricing span {
+  /* font-weight: 700; */
+  margin-bottom: 4px;
+  text-decoration: line-through;
+  color: #8C8C8C;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.single-showcasing .single-showcasing_inner.grid-discount .grid-right .quantity-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+  gap: 20px;
+}
+
+.single-showcasing .single-showcasing_inner .grid-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-bottom .designby-card .vendor-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.grid-bottom .designby-card img {
+  width: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.grid-bottom .line {
+  width: 100%;
+  height: 2px;
+  background-color: #f0f0f0;
+}
+
+.grid-bottom .txt1 p {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+.grid-bottom .designby-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-bottom .designby-card .designImg-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.grid-bottom .designby-card .designImg-card span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #595959;
+}
+
+.grid-bottom .designby-card .designImg-card h6 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.grid-bottom .colors {
+  padding-top: 30px;
+}
+
+.grid-bottom .colors p {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.grid-bottom .designby-card .design-comment .icon {
+  color: #9a9a9a;
+  font-size: 24px;
+
+}
+
+.grid-bottom .colors .color {
+  display: flex;
+  gap: 10px;
+}
+
+.grid-bottom .colors .color>div {
+  height: 24px;
+  height: 24px;
+  padding: 15px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+.grid-bottom .colors .color>div:nth-child(1) {
+  background: #E98862;
+
+}
+
+.grid-bottom .colors .color>div:nth-child(2) {
+  background: #0CBC8B;
+
+}
+
+.grid-bottom .colors .color>div:nth-child(3) {
+  background: black;
+
+}
+
+.grid-bottom .colors .color>div:nth-child(4) {
+  background: #070be8;
+
+}
+
+.grid-bottom .colors .color>div:nth-child(5) {
+  background: #FF1010;
+
+}
+
+.grid-bottom .colors .color>div:nth-child(6) {
+  background: yellow;
+
+}
+
+.grid-bottom .colors .color>div:nth-child(7) {
+  background: #9747FF;
+}
+
+.grid-bottom .description {
+  padding-block: 15px;
+}
+
+.grid-bottom .description p{
+font-size: 16px;
+font-weight: 700;
+}
+
+.grid-bottom .description span{
+
+font-size: 14px;
+font-weight: 400;
+color: #595959;
+margin-bottom: 10px;
+
+}
+
+.single-showcasing .single-showcasing_inner .grid-right .grid-bottom .quantity-wrapper .quantity-card {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.single-showcasing .single-showcasing_inner .grid-right .grid-bottom .quantity-wrapper .quantity-card h5 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #101928;
+  margin-block: 20px;
+
+}
+.single-showcasing .single-showcasing_inner .grid-right .grid-bottom .quantity-wrapper .quantity-card .quantity-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid gray;
+  border-radius: 40px;
+  width: 184px;
+  height: 64px;
+  /* margin-right: 16px; */
+  padding: 28px;
+}
+
+

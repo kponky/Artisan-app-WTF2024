@@ -6,15 +6,18 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import AdvanceTrain from "./pages/dashboard/advanced-training/AdvanceTrain";
-import DiscountedMat from "./pages/dashboard/discounted-material/DiscountedMat";
+import AddProduct from "./pages/dashboard/AddProduct";
+import Checkout from "./pages/dashboard/Checkout";
 import Networking from "./pages/dashboard/Networking";
 import Overview from "./pages/dashboard/Overview";
 import Settings from "./pages/dashboard/Settings";
 import ShowcaseSales from "./pages/dashboard/ShowcaseSales";
+import SingleShowCasing from "./pages/dashboard/SingleShowCasing";
+// import ShowcaseSinglePage from "./pages/dashboard/ShowcaseSinglePage";
 import SingleNetworking from "./pages/dashboard/SingleNetworking";
+import AdvanceTrain from "./pages/dashboard/advanced-training/AdvanceTrain";
+import DiscountedMat from "./pages/dashboard/discounted-material/DiscountedMat";
 import SinglePageDiscount from "./pages/dashboard/discounted-material/SinglePage";
-import Checkout from "./pages/dashboard/Checkout";
 
 const AppRoutes = () => {
   return (
@@ -36,13 +39,12 @@ const AppRoutes = () => {
             path="discounted-materials/:id"
             element={<SinglePageDiscount />}
           ></Route>
-          <Route
-            path="checkout"
-            element={<Checkout />}
-          ></Route>
+          <Route path="checkout" element={<Checkout />}></Route>
+          <Route path="addproduct" element={<AddProduct />}></Route>
           <Route path="networking" element={<Networking />}></Route>
           <Route path="networking/:id" element={<SingleNetworking />}></Route>
           <Route path="showcase-sales" element={<ShowcaseSales />}></Route>
+          <Route path="showcase-sales/:id" element={<SingleShowCasing/>}></Route>
           <Route path="settings" element={<Settings />}></Route>
         </Route>
         <Route path="/login" element={<Login />} />

@@ -166,7 +166,9 @@ const SignupForm = () => {
   return (
     <div className="signupform-wrapper ">
       <div className="signup-form-container container">
-        <img src={logo} alt="Logo" className="form-logo" />
+        <Link to= '/'>
+          <img src={logo} alt="Logo" className="form-logo" />
+        </Link>
         <div className="form-text">
           <h6>Hi, Welcome to ArtCorner!</h6>
           <p>Create an account and start enjoying ArtCorner</p>

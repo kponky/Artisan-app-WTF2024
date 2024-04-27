@@ -1,5 +1,4 @@
-// import React from "react";
-
+import React from "react";
 import ProductCard from "../../../Components/ProductCard";
 import { discountData } from "../../../data/discountedData";
 import "/src/styles/discountedMat.css";

@@ -56,7 +56,6 @@ const SinglePageDiscount = () => {
             </div>
             <div className="pricing">
               <h6>{formatCurrency(item.discount, "NGN")}</h6>
-
               <span> {formatCurrency(item.price, "NGN")}</span>
             </div>
             <div className="quantity-wrapper">
@@ -72,10 +71,7 @@ const SinglePageDiscount = () => {
                   </button>
                 </div>
 
-                <span>
-                  Only <strong>12 items</strong> left! <br />
-                  Don't miss it
-                </span>
+               
               </div>
             </div>
             <div className="or">

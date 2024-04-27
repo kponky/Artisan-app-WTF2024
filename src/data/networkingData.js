@@ -1,7 +1,7 @@
 import Img1 from "../assets/seamstress.jpg";
 import Img2 from "../assets/ceramist.jpg";
 import Img3 from "../assets/leather maker.jpg";
-import Img4 from "../assets/art 3.jpg";
+import Img4 from "../assets/shoe maker 2.jpg";
 import Img5 from "../assets/male designer.jpg";
 import Img6 from "../assets/Af 1jpg.jpg";
 import Img7 from "../assets/gele tie.jpg";

@@ -32,7 +32,11 @@ const AddProduct = () => {
       </div>
       <div className="buttons">
         <button className="btn">Cancel</button>
+<<<<<<< HEAD
         <button className="btn" onClick={handleOpenModal}>Add Product</button>
+=======
+        <button className="btn">Add Product</button>
+>>>>>>> db9c80ede3df7cff780b3e8e9f04011c0b25ee31
       </div>
 
 

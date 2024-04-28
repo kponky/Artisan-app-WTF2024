@@ -63,11 +63,15 @@ const ProductPicture = () => {
         </label>
         <input id="file-upload" type="file" onChange={handleChange} />
         <img src={file} alt="" className="uploaded-img" />
+<<<<<<< HEAD
         <aside className="file-info">
           {" "}
           <span>Only PNG, JPG format allowed.</span>{" "}
           <p> 500 x 500 pixels are recommended</p>{" "}
         </aside>
+=======
+        <aside className="file-info"> <span>Only PNG, JPG format allowed.</span>  <p> 500 x 500 pixels are recommended</p>  </aside>
+>>>>>>> db9c80ede3df7cff780b3e8e9f04011c0b25ee31
       </div>
     </div>
   );

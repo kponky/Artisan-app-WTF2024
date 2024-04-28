@@ -45,11 +45,17 @@
 
 .add-product__container .add-product-wrapper  .right{
   width: 100%;
+<<<<<<< HEAD
   height: 70%;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 8px;
   margin-top: 30px;
 
+=======
+  height: 90%;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  border-radius: 8px;
+>>>>>>> db9c80ede3df7cff780b3e8e9f04011c0b25ee31
 
 }
 

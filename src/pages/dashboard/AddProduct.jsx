@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/addproduct.css";
 import ProductInformation from "../../Components/ProductInformation";
 import ProductPicture from "../../Components/ProductPicture";
+import AddProductModal from "../../Components/AddProductModal";
+
 
 const AddProduct = () => {
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOpenModal = () =>{
+    setOpenModal(true);
+  }
+
+  const handleCloseModal = () =>{
+    setOPenModal(false)
+  }
   return (
     <div className="add-product__container" id="addproduct">
       <div>
@@ -19,11 +31,15 @@ const AddProduct = () => {
       </div>
       </div>
       <div className="buttons">
-        <button>Cancel</button>
-        <button>Add Product</button>
+        <button className="btn">Cancel</button>
+        <button className="btn" onClick={handleOpenModal}>Add Product</button>
       </div>
+
+
     </div>
   );
 };
 
 export default AddProduct;
+
+// <AddProductModal open = {openModal} onClose= {() => setOpenModal(false)}/>

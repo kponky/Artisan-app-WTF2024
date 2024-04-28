@@ -1,5 +1,6 @@
 import {
   faComment,
+  faMessage,
   faMinus,
   faPlus,
   faStar,
@@ -101,7 +102,7 @@ const ShowcaseSinglePage = () => {
                 </div>
 
                 <div className="design-comment">
-                  <FontAwesomeIcon icon={faComment} className="icon" />
+                  <FontAwesomeIcon icon={faMessage} className="icon" />
                 </div>
               </div>
 
@@ -147,7 +148,7 @@ const ShowcaseSinglePage = () => {
 
                 <div className="item-revw">
                   <h6>Reviews</h6>
-                  <p>12phots.22coments</p>
+                  <p>12phots .22coments</p>
                   <div className="flex-img">
                     <div className="revv-img">
                       <img src={item.image} alt="" />
@@ -171,7 +172,7 @@ const ShowcaseSinglePage = () => {
                       <img src={item.image} alt="" />
                     </div>
                     <div className="overlay1">
-                      <p>+9</p>
+                      <p> +9</p>
                     </div>
                   </div>
                 </div>
@@ -212,12 +213,11 @@ const ShowcaseSinglePage = () => {
               </Link>
               <button
                 className="btn addtocart"
-                onClick={() => addToCart(item, item.id)}
-              >
+                onClick={() => addToCart(item, item.id)}>
                 Add to Cart
               </button>
 
-              <Link to="/">
+              <Link to="/dashboard/AddProduct">
                 <button className="btn">Add Product</button>
               </Link>
             </div>

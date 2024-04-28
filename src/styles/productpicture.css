@@ -1,0 +1,118 @@
+.product-picture__container {
+  width: 100%;
+  padding-inline: 24px;
+}
+
+.product-picture__container h6 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-block: 20px;
+}
+
+.product-picture__container .img-update {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-picture__container .img-update .handbag {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-picture__container .img-update img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-picture__container .img-update .edit p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 19.6px;
+  color: #232323;
+}
+
+.product-picture__container .img-update .del-update {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-block: 10px;
+
+}
+
+.product-picture__container .img-update .del-update button {
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+
+}
+
+.product-picture__container .img-update .del-update button:nth-child(1) {
+  color: coral;
+  font-family: 500;
+  font-size: 16px;
+
+}
+
+.product-picture__container .img-update .del-update button:nth-child(2) {
+  color: #4B68FF;
+  font-family: 500;
+  font-size: 16px;
+
+}
+
+
+.product-picture__container .addimage-card {
+  border-style: dashed;
+  border-radius: 16px;
+  margin-top: 40px;
+  height: 287px;
+  width: 310px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 25px;
+  padding: 10px;
+}
+
+.product-picture__container .addimage-card .icon {
+  font-size: 34px;
+  color: #9a9a9a;
+}
+
+.product-picture__container .addimage-card p {
+  font-size: 17px;
+  font-weight: 600;
+  color: #6c6c6c;
+}
+
+.product-picture__container .addimage-card span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #9a9a9a;
+}
+
+.product-picture__container .addimage-card input{
+   border: none;
+   background: transparent;
+  
+}
+
+.product-picture__container .addimage-card img {
+
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.add-product__container .addimage-card .uploaded-img{
+  width: 150px;
+  height: 100px;
+}

@@ -1,6 +1,7 @@
 .product-picture__container {
   width: 100%;
   padding-inline: 24px;
+  height: 100%;
 }
 
 .product-picture__container h6 {

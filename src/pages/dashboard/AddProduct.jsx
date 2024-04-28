@@ -19,8 +19,8 @@ const AddProduct = () => {
       </div>
       </div>
       <div className="buttons">
-        <button>Cancel</button>
-        <button>Add Product</button>
+        <button className="btn">Cancel</button>
+        <button className="btn">Add Product</button>
       </div>
     </div>
   );

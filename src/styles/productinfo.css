@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   padding-inline: 24px;
-  padding-bottom: 30px;
+  padding-bottom: 150px;
 
 }
 
@@ -33,36 +33,77 @@
   margin-top: 6px;
 }
 
-.product-info-wrapper .form-card .form-group .form-control::placeholder{
+.product-info-wrapper .form-card .form-group .form-control::placeholder {
   font-size: 17px;
 }
 
-.product-info-wrapper .form-card .price-quant{
+.product-info-wrapper .form-card .price-quant {
   display: flex;
   align-items: center;
   gap: 40px;
 
 }
 
-.product-info-wrapper .form-card .price-quant input{
+.product-info-wrapper .form-card .price-quant input {
   width: 220px;
 }
 
-.product-info-wrapper .form-card .form-group .items-category{
+.product-info-wrapper .form-card .form-group .items-category {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   gap: 30px;
 }
-.product-info-wrapper .form-card .form-group .items-category > div {
-background-color: #9b9797;
-width: 110px;
-padding: 10px 16px;
-border-radius: 20px;
-/* height: 41px; */
-text-align: center;
-align-items: center;
+
+.product-info-wrapper .form-card .form-group .items-category>div {
+  background-color: #9b9797;
+  width: 110px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  /* height: 41px; */
+  text-align: center;
+  align-items: center;
 }
 
 
 
+
+
+@media screen and (max-width: 768px) { 
+
+  .product-info-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+  
+  }
+
+  .product-info-wrapper .form-card {
+    width: 100%;
+  }
+
+  .product-info-wrapper .form-card .price-quant input {
+    width: 100%;
+  }
+
+  .product-info-wrapper .form-card .form-group .items-category {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+  }
+
+  .product-info-wrapper .form-card .form-group .items-category>div {
+    background-color: #9b9797;
+    width: 100%;
+    padding: 10px 19px;
+    border-radius: 20px;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* height: 41px; */
+    text-align: center;
+    align-items: center;
+  }
+
+}

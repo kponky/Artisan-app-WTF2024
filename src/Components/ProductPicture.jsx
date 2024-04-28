@@ -26,16 +26,26 @@ const ProductPicture = () => {
         </div>
       </div>
 
-      <div className="addimage-card">
-        <FontAwesomeIcon icon={faImage} className="icon" />
-        <input type="file" onChange={handleChange} />
+      <div className="upload-container">
+        <label htmlFor="file-upload" className="custom-file-upload">
+          <FontAwesomeIcon icon={faImage} className="icon" />
+          Upload Your Product Picture
+        </label>
+        <input id="file-upload" type="file" onChange={handleChange} />
         <img src={file} alt="" className="uploaded-img" />
-        <p>Upload your product picture</p>
-        <span>Only PNG, JPG format allowed.</span>
-        <span>500x500 pixels are recommended</span>
+        <aside className="file-info"> <span>Only PNG, JPG format allowed.</span>  <p> 500 x 500 pixels are recommended</p>  </aside>
       </div>
     </div>
   );
 };
 
 export default ProductPicture;
+
+// <div className="addimage-card">
+// <FontAwesomeIcon icon={faImage} className="icon" />
+// <input type="file" onChange={handleChange} />
+// <img src={file} alt="" className="uploaded-img" />
+// <p>Upload your product picture</p>
+// <span>Only PNG, JPG format allowed.</span>
+// <span>500x500 pixels are recommended</span>
+// </div>

@@ -9,7 +9,7 @@ const Modal = ({ open, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="overlay">
-        <div className="modalContainer">This is the moda</div>
+        <div className="modalContainer"></div>
         <div className="modal-right">
           <p className="close-btn" onClick={onClose}>
             {" "}

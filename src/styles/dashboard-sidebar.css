@@ -95,6 +95,18 @@
     padding-inline: 24px;
   }
 
+  .side-other li a{
+    display: flex;
+    gap: 30px;
+    /* padding: 10px; */
+  }
+
+  .side-other .icon{
+color: #8b8888;
+margin-right: 10px;
+
+  }
+
 
 
 .dashboard-sidebar li .signout-logout:hover{

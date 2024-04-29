@@ -8,14 +8,8 @@ import AddProductModal from "../../Components/AddProductModal";
 const AddProduct = () => {
 
   const [openModal, setOpenModal] = useState(false);
+  const handleOpenModal = () => setOpenModal(true)
 
-  const handleOpenModal = () =>{
-    setOpenModal(true);
-  }
-
-  const handleCloseModal = () =>{
-    setOPenModal(false)
-  }
   return (
     <div className="add-product__container" id="addproduct">
       <div>
@@ -33,7 +27,7 @@ const AddProduct = () => {
       <div className="buttons">
         <button className="btn">Cancel</button>
         <button className="btn" onClick={handleOpenModal}>Add Product</button>
-        <button className="btn">Add Product</button>
+        <AddProductModal open = {openModal} onClose= {() => setOpenModal(false)}/>
       </div>
 
 

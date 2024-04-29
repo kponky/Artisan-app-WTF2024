@@ -3,7 +3,7 @@ import "../styles/offer.css";
 import image1 from "../assets/artisan 8.jpg";
 import image2 from "../assets/leather material.jpg";
 import image3 from "../assets/artisan networking.jpg";
-import image4 from "../assets/woven bag 1.jpg";
+import image4 from "../assets/showcase 8.jpg";
 
 const Offer = () => {
   return (
@@ -27,7 +27,7 @@ const Offer = () => {
           <div className="text1">
             <h2>Advanced Trainings </h2>
             <p>
-              Stay at the top of your game with our exclusive trainign sessions.
+              Stay at the top of your game with our exclusive Training sessions.
               Learn new techniques, refine your skills and keep your craft as
               sharp as your tools. Trainings are available as webinars or
               in-person workshops.

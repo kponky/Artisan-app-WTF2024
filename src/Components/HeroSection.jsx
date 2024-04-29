@@ -4,6 +4,7 @@ import heropageimg1 from "../assets/Frame 7.png";
 // import { Link } from 'react-router-dom'
 import { HashLink as Link } from "react-router-hash-link";
 
+
 const HeroSection = () => {
   return (
     <div className="heroWrapper " id="home">

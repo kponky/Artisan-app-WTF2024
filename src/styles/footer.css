@@ -10,7 +10,8 @@ a{
 
 
 .footer-wrapper{
-  background-color: var(--backgroundColor);
+ background: #01011F;
+  /* background-color: var(--backgroundColor); */
   color: white;
   width: 100%;
 }

@@ -7,6 +7,7 @@ import { AuthContext } from "../contexts/AuthContext";
 import { auth } from "../firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import '../styles/navbar.css'
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);

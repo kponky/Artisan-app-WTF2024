@@ -2,20 +2,14 @@ import React, { useState } from "react";
 import "../../styles/addproduct.css";
 import ProductInformation from "../../Components/ProductInformation";
 import ProductPicture from "../../Components/ProductPicture";
-import AddProductModal from "../../Components/AddProductModal";
-
+// import AddProductModal from "../../Components/AddProductModal";
+import Modal2 from "../../Components/Modal2";
+import '../../styles/modal2.css'
 
 const AddProduct = () => {
+const [openModal, setOpenModal] = useState(false);
+// const handleOpenModal = () => setOpenModal(true);
 
-  const [openModal, setOpenModal] = useState(false);
-
-  const handleOpenModal = () =>{
-    setOpenModal(true);
-  }
-
-  const handleCloseModal = () =>{
-    setOPenModal(false)
-  }
   return (
     <div className="add-product__container" id="addproduct">
       <div>
@@ -24,18 +18,19 @@ const AddProduct = () => {
       </div>
       <div className="add-product-wrapper">
         <div className="left">
-        <ProductInformation/>
+          <ProductInformation />
         </div>
         <div className="right">
-        <ProductPicture/>
-      </div>
+          <ProductPicture />
+        </div>
       </div>
       <div className="buttons">
         <button className="btn">Cancel</button>
-        <button className="btn" onClick={handleOpenModal}>Add Product</button>
-        <button className="btn">Add Product</button>
-      </div>
-
+        <button className="btn" onClick= {() => setOpenModal(true)}>
+          Add Product
+        </button>
+        <Modal2 open={openModal} onclose={()=> setOpenModal(false) }/>
+        </div>
 
     </div>
   );

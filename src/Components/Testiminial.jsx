@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/testimonial.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';

@@ -3,6 +3,8 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   margin-bottom: 120px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .grid .text1,
@@ -33,7 +35,6 @@
   border-radius: 24px;
   height: 507px;
   width: 100%;
-
   overflow: hidden;
 }
 
@@ -47,6 +48,7 @@
 @media screen and (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(1, 1fr);
+    width: 100%;
   }
 
   .grid .text1,
@@ -55,6 +57,14 @@
   }
 
   .grid .text2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
+
+  .grid .text1 {
+  padding-left: 16px;
+}
+
+.grid .text2 {
+  padding-right: 16px;
+}
 }

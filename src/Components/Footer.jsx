@@ -92,9 +92,7 @@ const Footer = () => {
 
       <div className="footer-bar">
         <p>
-          &copy; 2024 Artcorner. All rights reserved. Designed by Abasz &
-          Alhassan
-        </p>
+          &copy; 2024 ArtCorner. All rights reserved. Designed by Abasz </p>
       </div>
     </div>
   );

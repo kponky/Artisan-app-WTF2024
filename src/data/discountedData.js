@@ -1,10 +1,10 @@
-import Img1 from "../assets/Af 1jpg.jpg";
+import Img1 from "../assets/beadmaking tools.jpeg";
 import Img2 from "../assets/african bangle 1.jpg";
 import Img3 from "../assets/ribbons.jpg";
 import Img4 from "../assets/pencils.jpg";
 import Img5 from "../assets/threads.jpg";
-import Img6 from "../assets/crochet 2.jpg";
-import Img7 from "../assets/flower farmer.jpg";
+import Img6 from "../assets/crochet bag, lady, top.jpg";
+import Img7 from "../assets/Artsit Material.jpg";
 import Img8 from "../assets/croshet.jpg";
 
 export const discountData = [

@@ -12,7 +12,8 @@ const Offer = () => {
         <div className="offerText">
           <h2>What We Offer</h2>
           <p>
-            We empower artisans to craft their success. Here are a few of our
+            We empower artisans to craft their success. <br/>
+            Here are a few of our
             services:
           </p>
         </div>

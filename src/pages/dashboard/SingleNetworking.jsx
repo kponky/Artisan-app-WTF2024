@@ -17,13 +17,13 @@ const SingleNetworking = () => {
       </div>
 
       <div className="admin-user-img">
-        <img src={adminImg} alt="" className="adminImg" />
-        <img src={artisanImg} alt="" className="userImg" />
+          <img src={adminImg} alt="" className="adminImg" />
+           <img src={artisanImg} alt="" className="userImg" />
       </div>
 
       <div className="admin-user-text">
-      <span>Admin</span>
-      <span>Artisan</span>
+      <span> Admin <p> Artisan </p> </span>
+    
       
       </div>
     </div>

@@ -22,13 +22,13 @@ const ProductCard2 = (props) => {
           <p>{item.title}</p>
         </Link>
         <span>
-          <span className="p-item">{item.discount}</span>
-        </span>
+          <span className="p-item">  {item.discount}</span>
+  {  /*      <span className="p-item"> {item.discount}</span>*/}        </span>
       </div>
       <div className="item2">
         <div className="price">
           <p style={{ textDecoration: "none" }}>
-            5k people enrolled <span>{item.price}</span>
+            5k people enrolled <span> {item.price}</span>
           </p>
         </div>
       </div>
@@ -41,4 +41,8 @@ const ProductCard2 = (props) => {
 };
 
 export default ProductCard2;
- 
+// <div className="price">
+// <p style={{ textDecoration: "none" }}>
+//   5k people enrolled <span>{item.price}</span>
+// </p>
+// </div>

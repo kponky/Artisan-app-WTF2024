@@ -1,62 +1,58 @@
-.admin-user__wrapper{
+.admin-user__wrapper {
   background-color: aliceblue;
   text-align: center;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-
-/* .admin-user__wrapper  .admin-text-card{
-  margin: auto;
-top: 50%;
-left: 50%;
-position: absolute;
-transform: translate(-50%, -50%);
-border-radius: 8px;
-/* padding: 16px 54px; */
-/* cursor: pointer; */
-/* } */ 
-
-.admin-user__wrapper .admin-user-logo {
-  width: 170px;
-  height: 70px;
-  
+.admin-user__wrapper .admin-text-card {
+  padding-block: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.admin-user__wrapper .admin-contxt .admin-user-logo-text {
-  margin: 40px;
-}
-.admin-user__wrapper .admin-contxt .admin-user-logo-text h6{
+.admin-user__wrapper .admin-text-card h6 {
 
   font-size: 32px;
   font-weight: 700;
   line-height: 60px;
-  text-align: center;
   color: #262626;
-  
+
 }
 
-.admin-user__wrapper  img{
+.admin-user-img {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  align-items: center;
+}
+
+.admin-user__wrapper .admin-user-img .adminImg {
+  width: 350px;
+  height: 349px;
+}
+
+.admin-user__wrapper .admin-user-img .userImg {
+  width: 350px;
+  height: 349px;
+}
+
+.admin-user__wrapper .admin-user-img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.admin-user{
+.admin-user__wrapper .admin-user-text span {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  gap: 400px;
+  margin-block: 10px;
+  color: #03045E;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
 }
-
-.admin-user .admin .adminImg{
-  width: 430px;
-  height: 458px;
-}
-.admin-user .artisan .userImg{
-  width: 430px;
-  height: 408px;
-}
-
-

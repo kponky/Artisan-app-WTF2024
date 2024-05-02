@@ -38,7 +38,7 @@ const ProductCard4 = (props) => {
         </div>
         <div className="price">
           <p>
-            <p>{formatCurrency(item.price, "NGN")}</p>
+            <span>{formatCurrency(item.price, "NGN")}</span>
           </p>
         </div>
       </div>
